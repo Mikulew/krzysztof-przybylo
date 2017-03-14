@@ -1,7 +1,5 @@
-
-
 $(document).ready(function() {
-  var $menu = $(".hamburger");
+  var $menu = $('.hamburger');
   var $navbar = $('.navbar');
 
   $menu.click('click', toggleMenu);
@@ -22,7 +20,7 @@ $(document).ready(function() {
     $('html, body').animate({
       'scrollTop': $target.offset().top
     }, 900, 'swing');
-    if($menu.hasClass('open') && $navbar.hasClass('open')) {
+    if ($menu.hasClass('open') && $navbar.hasClass('open')) {
       $menu.removeClass('open');
       $navbar.removeClass('open');
     }
