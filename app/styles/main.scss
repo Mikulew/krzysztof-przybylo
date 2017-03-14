@@ -1,0 +1,521 @@
+@import 'variables';
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+html {
+  font-size: 62.5%;
+  background: $background;
+}
+
+body {
+  font: {
+    family: $fontText;
+    size: 1.6rem;
+  }
+  color: $fontColor;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img, embed, object, video {
+  max-width: 100%;
+}
+
+a:link {
+  color: $fontNavColor;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $fontNavColorHover;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+  // =NAVBAR
+  .navbar.open {
+    left: 0;
+    z-index: 200;
+  }
+  .navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: -800px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: $fontNavBackground;
+    border: 0 solid transparent;
+    letter-spacing: 1px;
+    z-index: 101;
+    margin-top: 40px;
+    height: 100vh;
+    width: 100%;
+    transition: $animation;
+
+    & > .navlabel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background:  $fontNavBackground;
+      width: 100%;
+      height: 7%;
+      line-height: 7%;
+      text-align: center;
+      border-bottom: 1px solid $fontNavColor;
+      z-index: 200;
+    }
+
+    & > .navlabel:first-child {
+      border-top: 1px solid $fontNavColor;
+    }
+
+    .navlabel:hover {
+      background: $fontNavBackgroundHover;
+      & > .navtext {
+        color: $fontNavColorHover;
+      }
+    }
+    .navtext {
+      font: {
+        family: $fontNav;
+        size: 1.6rem;
+      }
+      letter-spacing: 1px;
+      color: $fontNavColor;
+      user-select: none;
+      transition: $animation;
+      z-index: 200;
+    }
+  }
+  .hamburger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    background:  $fontNavBackground;
+    cursor: pointer;
+    margin: 0 auto;
+    z-index: 2300;
+
+    & > .hamburger-panel {
+      background-color: $fontNavColor;
+      width: 3rem;
+      height: .6rem;
+      margin-bottom: 0.6rem;
+      transition: $animation;
+    }
+
+    &.open {
+      .hamburger-1 {
+        transform: translateY(1.2rem) rotate(45deg);
+      }
+
+      .hamburger-2 {
+        opacity: 0;
+      }
+
+      .hamburger-3 {
+        transform: translateY(-1.2rem) rotate(-45deg);
+      }
+    }
+  }
+  .hamburger::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-color:  $fontNavBackground;
+    z-index: -100;
+  }
+  // =HEADER
+  #sectionHeader {
+    width: 100%;
+    height: 100vh;
+    background: yellow;
+  }
+  // =SECTION VIDEO
+  #sectionLessonsVideo {
+    width: 100%;
+    height: 100vh;
+    background: red;
+  }
+  // =SECTION SKYPE
+  #sectionLessonsSkype {
+    width: 100%;
+    height: 100vh;
+    background: blue;
+  }
+  // =STUDENTS SUCCESS
+  #sectionSuccessPanel {
+    width: 100%;
+    height: 100vh;
+    background: green;
+  }
+  // =REFERENCES
+  #sectionReferences {
+    width: 100%;
+    height: 100vh;
+    background: violet;
+  }
+  // =CONTACT
+  #sectionContact {
+    width: 100%;
+    height: 100vh;
+    background: black;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 767px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .hamburger {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background:  $fontNavBackground;
+    border: 0 solid transparent;
+    letter-spacing: 1px;
+    z-index: 101;
+    margin: 0;
+    min-height: 50px;
+    width: 100vw;
+    border-bottom: 1px solid $fontNavColor;
+    transition: $animation;
+  }
+
+  .navlabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    margin: auto;
+    transition: $animation;
+    min-height: 50px;
+  }
+
+  .navlabel:first-child {
+    margin-left: 8%;
+  }
+
+  .navlabel:last-child {
+    margin-right: 8%;
+  }
+
+  .navlabel:hover {
+    background: $fontNavBackgroundHover;
+    & > .navtext {
+      color: $fontNavColorHover;
+    }
+  }
+
+  .navtext {
+    font: {
+      family: $fontNav;
+      size: 1.6rem;
+    }
+    letter-spacing: 1px;
+    color: $fontNavColor;
+    user-select: none;
+    transition: $animation;
+    line-height: 100%;
+  }
+  // =HEADER
+  #sectionHeader {
+    width: 100%;
+    height: 100vh;
+    background: yellow;
+  }
+  // =SECTION VIDEO
+  #sectionLessonsVideo {
+    width: 100%;
+    height: 100vh;
+    background: red;
+  }
+  // =SECTION SKYPE
+  #sectionLessonsSkype {
+    width: 100%;
+    height: 100vh;
+    background: blue;
+  }
+  // =STUDENTS SUCCESS
+  #sectionSuccessPanel {
+    width: 100%;
+    height: 100vh;
+    background: green;
+  }
+  // =REFERENCES
+  #sectionReferences {
+    width: 100%;
+    height: 100vh;
+    background: violet;
+  }
+  // =CONTACT
+  #sectionContact {
+    width: 100%;
+    height: 100vh;
+    background: black;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media only screen  and (min-width: 1280px) {
+  .hamburger {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background:  $fontNavBackground;
+    border: 0 solid transparent;
+    letter-spacing: 1px;
+    z-index: 101;
+    margin: 0;
+    min-height: 50px;
+    width: 100%;
+    border-bottom: 1px solid $fontNavColor;
+    transition: $animation;
+  }
+
+  .navlabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    margin: auto;
+    transition: $animation;
+    height: 50px;
+  }
+
+  .navlabel:first-child {
+    margin-left: 8%;
+  }
+
+  .navlabel:last-child {
+    margin-right: 8%;
+  }
+
+  .navlabel:hover {
+    background: $fontNavBackgroundHover;
+    & > .navtext {
+      color: $fontNavColorHover;
+    }
+  }
+
+  .navtext {
+    font: {
+      family: $fontNav;
+      size: 1.6rem;
+    }
+    letter-spacing: 1px;
+    color: $fontNavColor;
+    user-select: none;
+    transition: $animation;
+    line-height: 100%;
+  }
+  // =HEADER
+  #sectionHeader {
+    width: 100%;
+    height: 100vh;
+    background: {
+      image: url('/images/page-main.jpg');
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
+    position: relative;
+
+    .mainHeader {
+      font : {
+        family: $fontNav;
+        style: italic;
+      }
+      color: $fontNavColor;
+      position: absolute;
+      top: 20%;
+      left: 5%;
+      font-size: 3.6rem;
+    }
+    .mainHeaderName {
+      font: {
+        family: $fontDecoration;
+        size: 6rem;
+      }
+      line-height: 6.6rem;
+      letter-spacing: 1px;
+      color: $fontNavColorHover;
+    }
+    .mainHeaderParagraph {
+      font: {
+        family: $fontNav;
+        style: italic;
+        size: 2.4rem;
+      }
+      color: $fontNavColor;
+      position: absolute;
+      line-height: 2.8rem;
+      top: 60%;
+      right: 5%;
+      width: 25%;
+    }
+    .mainHeaderParagraphColor {
+      color: $fontNavColorHover;
+    }
+  }
+  // =SECTION VIDEO
+  #sectionLessonsVideo {
+    width: 100%;
+    height: 100vh;
+    background: {
+      image: url('/images/page-video.jpg');
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
+    position: relative;
+    & > iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .mainVideo {
+      font: {
+        family: $fontDecoration;
+        size: 3.6rem;
+      }
+      position: absolute;
+      color: $fontNavColorHover;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  // =SECTION SKYPE
+  #sectionLessonsSkype {
+    width: 100%;
+    height: 100vh;
+    background: {
+      image: url('/images/page-skype.jpg');
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
+  }
+  // =STUDENTS SUCCESS
+  #sectionSuccessPanel {
+    width: 100%;
+    height: 100vh;
+    background: {
+      image: url('/images/page-success.jpg');
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
+  }
+  // =REFERENCES
+  #sectionReferences {
+    width: 100%;
+    height: 100vh;
+    background: {
+      image: url('/images/page-reference.jpg');
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
+  }
+  // =CONTACT
+  #sectionContact {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: {
+      image: url('/images/page-contact.jpg');
+      position: center bottom;
+      size: cover;
+      repeat: no-repeat;
+    }
+  }
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    & > label {
+      font: {
+        family: $fontNav;
+        size: 2.6rem;
+      }
+      text-align: center;
+      padding: 20px 0;
+      color: $fontNavColorHover;
+    }
+    & > input {
+      border-radius: 5px;
+      border: 2px solid $fontNavColorHover;
+      height: 25px;
+    }
+    & > textarea {
+      border-radius: 5px;
+      border: 2px solid $fontNavColorHover;
+      resize: none;
+    }
+    & > [type="submit"] {
+      font: {
+        family: $fontNav;
+        size: 2rem;
+      }
+      margin-top: 20px;
+      color: $fontNavColorHover;
+      background: $fontNavBackgroundHover;
+      border: 2px solid $fontNavColorHover;
+      border-radius: 5px;
+      height: 40px;
+      transition: $animation;
+    }
+    & > [type="submit"]:hover {
+      color: $fontNavColor;
+      background: $fontNavBackground;
+      cursor: pointer;
+      height: 40px;
+    }
+  }
+}
