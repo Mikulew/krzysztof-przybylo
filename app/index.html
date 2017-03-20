@@ -14,12 +14,13 @@
 
     <!-- build:css styles/main.css -->
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Ranga|Roboto:400,400i,700" rel="stylesheet">
-    <link rel="stylesheet" href="styles/animate.min.css"/>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/jquery.bxslider.min.css"/>
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- endbuild -->
   </head>
   <body>
@@ -38,58 +39,178 @@
         <a id="#homepageButton" href="#sectionHeader" class="navlabel">
           <span class="navtext">Strona główna</span>
         </a>
-        <a id="#lessonsVideoButton" href="#sectionLessonsVideo" class="navlabel">
-          <span class="navtext">Lekcje video</span>
-        </a>
-        <a id="#lessonsSkypeButton" href="#sectionLessonsSkype" class="navlabel">
-          <span class="navtext">Lekcje Skype</span>
-        </a>
         <a id="#successPanelButton" href="#sectionSuccessPanel" class="navlabel">
           <span class="navtext">Osiągnięcia uczniów</span>
         </a>
+        <a id="#lessonsVideoButton" href="#sectionLessonsVideo" class="navlabel">
+          <span class="navtext">YouTube</span>
+        </a>
         <a id="#referencesButton" href="#sectionReferences" class="navlabel">
-
           <span class="navtext">Referencje</span>
+        </a>
+        <a id="#pricesButton" href="#sectionPrices" class="navlabel">
+          <span class="navtext">Cennik</span>
         </a>
         <a id="#contactButton" href="#sectionContact" class="navlabel">
           <span class="navtext">Kontakt</span>
         </a>
+        <a href="http://krzysztofprzybylo.pl" target="_blank" class="navlabel navblog">
+          <span class="navtext">Blog</span>
+        </a>
       </div>
       <!-- HEADER -->
       <header id="sectionHeader">
-        <h1 class="mainHeader animated fadeInLeft">Cześć,<br> jestem<br><span class="mainHeaderName">Krzysztof Przybyło</span></h1>
-        <p class="mainHeaderParagraph animated fadeInRight">Urodziłem się w&nbsp;1986 roku. W&nbsp;wieku 18 lat <span class="mainHeaderParagraphColor">skończyłem Ogólnokształcącą Szkołę Muzyczna II stopnia</span> a&nbsp;następnie udałem się do Łodzi, aby kontynuować moją naukę w Akademii Muzycznej.</p>
-      </header>
-      <!-- LESSONS VIDEO -->
-      <section id="sectionLessonsVideo">
-        <h2 class="mainVideo">Subskrybuj mój kanał</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/AL2KVBqvebA" frameborder="0" allowfullscreen></iframe>
-      </section>
-      <!-- LESSONS SKYPE -->
-      <section id="sectionLessonsSkype">
-
-      </section>
+        <div class="header-wrapper">
+          <!--<div class="siema">-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/1.jpg" alt="1"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/2.jpg" alt="2"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/3.jpg" alt="3"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/4.jpg" alt="4"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/5.jpg" alt="5"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/6.2.jpg" alt="6.2"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/6.3.jpg" alt="6.3"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/7.2.jpg" alt="7.2"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/7.3.jpg" alt="7.3"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/8.jpg" alt="8"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/9.jpg" alt="9"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/10.jpg" alt="10"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/11.jpg" alt="11"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/12.jpg" alt="12"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/13.jpg" alt="13"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/14.jpg" alt="14"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/15.jpg" alt="15"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/16.jpg" alt="16"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/17.jpg" alt="17"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/18.jpg" alt="18"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/19.jpg" alt="19"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/20.jpg" alt="20"/>-->
+            <!--</div>-->
+            <!--<div>-->
+              <!--<img class="header-image" src="images/21.jpg" alt="21"/>-->
+            <!--</div>-->
+          <!--</div>-->
+        </div>
+        <button class="prev">Poprzedni</button>
+        <button class="next">Następny</button>
+        </header>
       <!-- STUDENTS SUCCESS-->
       <section id="sectionSuccessPanel">
 
       </section>
+      <!-- LESSONS VIDEO -->
+      <section id="sectionLessonsVideo">
+        <div class="video-wrapper">
+          <h2>Mój kanał na YouTube</h2>
+          <iframe id="video"  src="https://www.youtube.com/embed/AL2KVBqvebA" frameborder="0" allowfullscreen></iframe>
+          <a class="video-button" href="https://www.youtube.com/user/krissp26" target="_blank">Subskrybuj</a>
+        </div>
+      </section>
       <!-- REFERENCES PANEL -->
       <section id="sectionReferences">
-
+        <div class="references-wrapper">
+          <h2>Referencje</h2>
+          <div class="bxslider">
+            <div class="references-page">
+              <p class="references-paragraph">Świetny nauczyciel zarówno pod względem podejścia do ucznia, jak i materiału który z nim przerabia. Co także jest ważne, potrafi połączyć naukę zwykłej, nudnej teorii ze sprawiającą przyjemność praktyką. Najlepszy wybór dla uczniów zarówno początkujących, jak i zaawansowanych. Co najważniejsze - p. Krzysztof nie tylko jest znakomitym nauczycielem, ale przede wszystkim wysokiej klasy muzykiem.</p>
+              <p class="references-author">uczeń &ndash; Adam Wołosz</p>
+            </div>
+            <div class="references-page">
+              <p class="references-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus ex et posuere scelerisque. Pellentesque sem nibh, fringilla vel vehicula ut, vulputate vitae erat. Vestibulum nec mi condimentum sapien commodo pulvinar a at elit. Donec rhoncus luctus sapien venenatis pharetra. Nulla vulputate lacus erat, non volutpat ex dignissim sed. In enim odio, mattis in felis faucibus, aliquet interdum metus. In tempor erat ultrices euismod consectetur. Donec posuere sapien eros, ac efficitur ex faucibus vitae. Pellentesque a aliquet eros.</p>
+              <p class="references-author">uczeń &ndash; Jan Kowalski</p>
+            </div>
+            <div class="references-page">
+              <p class="references-paragraph">Nam ac gravida libero, interdum elementum dolor. In lectus turpis, hendrerit vel porttitor sed, tempus quis enim. Curabitur eu ex ante. Vestibulum varius ac enim et efficitur. Suspendisse sit amet eleifend est. Quisque tempor, libero non varius ornare, magna orci congue sapien, eu commodo arcu tellus sed felis. Donec sed nulla sed eros semper accumsan id in nulla. Mauris sed lobortis magna, at interdum odio. Aenean egestas vel massa quis rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur turpis felis, pulvinar pulvinar ex congue ac. Maecenas facilisis fermentum posuere. Mauris bibendum commodo ligula a sollicitudin.</p>
+              <p class="references-author">uczeń &ndash; Pan Nowak</p>
+            </div>
+            <div class="references-page">
+              <p class="references-paragraph">Integer dictum felis mauris, vitae condimentum dolor consequat id. Vestibulum eu sem tortor. Pellentesque molestie orci sit amet lorem sodales eleifend. Curabitur pulvinar sapien eleifend dolor accumsan faucibus. Duis pretium velit quis ante faucibus viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec condimentum, nunc ut pharetra consectetur, tellus dui sodales nisi, in malesuada orci odio a lectus. In rhoncus id ipsum non varius. Cras volutpat odio in odio vestibulum cursus. Etiam eget neque quis risus aliquet facilisis quis eget lacus. Curabitur et viverra purus, eu ornare massa.</p>
+              <p class="references-author">piłkarz &ndash; Robert Lewandowski</p>
+            </div>
+            <div class="references-page">
+              <p class="references-paragraph">Nunc id nibh in massa dapibus auctor vitae sed est. Sed cursus, ipsum ac molestie congue, nulla turpis mollis eros, vel posuere sem metus non arcu. Donec viverra tortor vel nulla aliquet porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin laoreet quam non diam malesuada, eget pretium libero faucibus. Nunc gravida venenatis arcu sed dictum. Ut in velit eu ligula laoreet rutrum eu in mauris. Nunc id arcu facilisis, iaculis turpis quis, pharetra sem. Sed aliquet ante id leo lobortis, vel ullamcorper velit pulvinar. Morbi venenatis ut massa imperdiet rhoncus. Sed euismod odio nec lacus vehicula, et consectetur augue malesuada.</p>
+              <p class="references-author">prezydent &ndash; Andrzej Duda</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PRICES LIST PANEL -->
+      <section id="sectionPrices">
+        <div class="prices-wrapper">
+          <h2>Cennik</h2>
+          <div>
+            <p><span class="prices-color">60zł</span> godzina zegarowa</p>
+            <p><span class="prices-color">45zł</span> godzina lekcyjna</p>
+          </div>
+          <div>
+            <p><span class="prices-color">pakiet 5</span> godzin zegarowych <span class="prices-color">240zł</span></p>
+            <p><span class="prices-color">pakiet 10</span> godzin zegarowych <span class="prices-color">450zł</span></p>
+          </div>
+          <div>
+            <p><span class="prices-color">pakiet 5</span> godzin lekcyjnych <span class="prices-color">180zł</span></p>
+            <p><span class="prices-color">pakiet 10</span> godzin lekcyjnych <span class="prices-color">340zł</span></p>
+          </div>
+        </div>
       </section>
       <!-- CONTACT PANEL -->
       <section id="sectionContact">
-        <form id="contactForm" action="">
-          <label for="name">Imię i nazwisko: </label>
-          <input type="text" id="name" placeholder="Jan Kowalski"/>
-          <label for="email">Email: </label>
-          <input type="text" id="email" placeholder="kowalski@gmail.com"/>
-          <label for="phone">Telefon: </label>
-          <input type="text" id="phone" placeholder="456 789 901"/>
-          <label for="content">Treść: </label>
-          <textarea id="content" rows="4" cols="50" placeholder="Piszę w sprawie..."></textarea>
-          <input type="submit"/>
-        </form>
+        <div class="contact-wrapper">
+          <h2>Skontaktuj się ze&nbsp;mną!</h2>
+          <div>
+            <p class="contact-color">Telefon:&nbsp;&nbsp;</p>
+            <p>535 589 080</p>
+          </div>
+          <div>
+            <p class="contact-color">Email:&nbsp;&nbsp;</p>
+            <p>przybylokrzysztof@gmail.com</p>
+          </div>
+          <div>
+            <p class="contact-color">Skype:&nbsp;&nbsp;</p>
+            <p>Krzysztof Przybyło</p>
+          </div>
+        </div>
       </section>
     </div>
 
@@ -105,13 +226,18 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/jquery.bxslider.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.bxslider').bxSlider();
+      });
+    </script>
     <!-- endbuild -->
   </body>
 </html>

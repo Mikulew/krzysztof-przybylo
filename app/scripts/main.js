@@ -1,4 +1,4 @@
-$(document).ready(function() {
+//$(document).ready(function() {
   var $menu = $('.hamburger');
   var $navbar = $('.navbar');
 
@@ -9,7 +9,7 @@ $(document).ready(function() {
     $navbar.toggleClass('open');
   }
 
-  $('.navlabel').on('click', scrollTo);
+  $('.navlabel:not(:last)').on('click', scrollTo);
 
   function scrollTo(e) {
     e.preventDefault();
@@ -25,4 +25,4 @@ $(document).ready(function() {
       $navbar.removeClass('open');
     }
   }
-});
+//});

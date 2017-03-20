@@ -30,9 +30,11 @@ img, embed, object, video {
 a:link {
   color: $fontNavColor;
   text-decoration: none;
+  transition: $animation;
 }
 
 a:visited {
+  color: $fontNavColor;
   text-decoration: none;
 }
 
@@ -49,7 +51,7 @@ a:active {
   // =NAVBAR
   .navbar.open {
     left: 0;
-    z-index: 200;
+    z-index: 500;
   }
   .navbar {
     display: flex;
@@ -62,8 +64,9 @@ a:active {
     background: $fontNavBackground;
     border: 0 solid transparent;
     letter-spacing: 1px;
-    z-index: 101;
-    margin-top: 40px;
+    z-index: 300;
+    margin-top: 3rem;
+    padding-top: 3rem;
     height: 100vh;
     width: 100%;
     transition: $animation;
@@ -74,11 +77,12 @@ a:active {
       align-items: center;
       background:  $fontNavBackground;
       width: 100%;
-      height: 7%;
-      line-height: 7%;
+      height: 16.5%;
+      line-height: 16.5%;
       text-align: center;
+      min-height: 20px;
       border-bottom: 1px solid $fontNavColor;
-      z-index: 200;
+      z-index: 500;
     }
 
     & > .navlabel:first-child {
@@ -94,13 +98,13 @@ a:active {
     .navtext {
       font: {
         family: $fontNav;
-        size: 1.6rem;
+        size: 2rem;
       }
       letter-spacing: 1px;
       color: $fontNavColor;
       user-select: none;
       transition: $animation;
-      z-index: 200;
+      z-index: 500;
     }
   }
   .hamburger {
@@ -113,7 +117,7 @@ a:active {
     background:  $fontNavBackground;
     cursor: pointer;
     margin: 0 auto;
-    z-index: 2300;
+    z-index: 400;
 
     & > .hamburger-panel {
       background-color: $fontNavColor;
@@ -143,50 +147,339 @@ a:active {
     top: 0;
     left: 0;
     width: 100%;
-    height: 5rem;
+    height: 3rem;
     background-color:  $fontNavBackground;
     z-index: -100;
   }
   // =HEADER
   #sectionHeader {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: yellow;
+    background: {
+      image: url('/images/page-main.jpg');
+      position-x: center;
+      position-y: 55%;
+      size: cover;
+      repeat: no-repeat;
+    }
+    position: relative;
   }
   // =SECTION VIDEO
   #sectionLessonsVideo {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: red;
-  }
-  // =SECTION SKYPE
-  #sectionLessonsSkype {
-    width: 100%;
-    height: 100vh;
-    background: blue;
+    position: relative;
+    background: {
+      image: url('/images/page-video.jpg');
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
+
+    & > .video-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      width: 95vw;
+      height: auto;
+      max-height: 100vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+
+      & > #video {
+        width: 90%;
+        height: auto;
+      }
+
+      & > h2 {
+        font: {
+          family: $fontNav;
+          size: 4.2rem;
+        }
+        text-align: center;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
+      }
+
+      & > .video-button {
+        font: {
+          family: $fontNav;
+          size: 2rem;
+        }
+        line-height: 2.2rem;
+        color: $background;
+        padding: 1.5rem 3rem;
+        border-radius: $radius;
+        margin: 2rem 0;
+        background-color: #e52d27;
+        transition: $animation;
+
+        &:hover {
+          color: #e52d27;
+          background-color: $background;
+        }
+      }
+    }
   }
   // =STUDENTS SUCCESS
   #sectionSuccessPanel {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: green;
+    background: {
+      image: url('/images/page-success.jpg');
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
   }
   // =REFERENCES
   #sectionReferences {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: {
+      image: url('/images/page-reference.jpg');
+      position-x: center;
+      position-y: 60%;
+      size: cover;
+      repeat: no-repeat;
+    }
+    & > .references-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      position: absolute;
+      width: 75vw;
+      height: auto;
+      max-height: 100vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+
+      & > h2 {
+        font: {
+          family: $fontNav;
+          size: 3rem;
+        }
+        text-align: center;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
+      }
+
+      & > .bx-wrapper {
+        & > .bx-viewport {
+          & > .bxslider {
+            & > .references-page {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-content: center;
+              align-items: center;
+              & > .references-paragraph {
+                font: {
+                  family: $fontDecoration;
+                  size: 1.6rem;
+                }
+                line-height: 1.6rem;
+                width: 90%;
+                color: $fontNavBackground;
+              }
+              & > .references-author {
+                font: {
+                  family: $fontNav;
+                  size: 1.6rem;
+                }
+                color: $fontNavColorHover;
+                margin: 0;
+                padding: 0;
+                width: 90%;
+              }
+            }
+          }
+        }
+        & > .bx-controls {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          justify-content: space-between;
+          top: 0;
+          left: 0;
+          font: {
+            family: $fontNav;
+          }
+          & > .bx-controls-direction {
+            & > .bx-prev {
+              display: none;
+            }
+            & > .bx-next {
+              display: none;
+            }
+          }
+          & > .bx-pager {
+            text-align: center;
+            font-size: .85em;
+            font-weight: bold;
+            color: #666;
+            & > .bx-pager-item {
+              margin: 2rem 1rem;
+              display: inline-block;
+              vertical-align: bottom;
+              & > .bx-pager-link {
+                font: {
+                  size: 2rem;
+                }
+              }
+              & > .bx-pager-link.active {
+                color: $fontNavColorHover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // =PRICE
+  #sectionPrices {
     width: 100%;
     height: 100vh;
-    background: violet;
+    position: relative;
+    background: {
+      image: url('/images/page-prices.jpg');
+      position-x: center;
+      position-y: 70%;
+      size: cover;
+      repeat: no-repeat;
+    }
+    & > .prices-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      width: 95vw;
+      height: auto;
+      max-height: 100vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+
+      & > h2 {
+        width: 100%;
+        text-align: center;
+        font: {
+          family: $fontNav;
+          size: 3rem;
+        }
+        margin: 1rem;
+        padding: 0;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
+      }
+
+      & > div {
+        text-align: center;
+        border-top: 2px $fontNavColorHover solid;
+        width: 70%;
+        margin: 0;
+        padding: 0;
+      }
+
+      & > div > p {
+        font: {
+          family: $fontDecoration;
+          size: 2rem;
+        }
+        margin: .5rem;
+        padding: 0;
+        color: $fontNavBackground;
+      }
+
+      & > div > p > .prices-color {
+        color: $fontNavColorHover;
+      }
+    }
   }
   // =CONTACT
   #sectionContact {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: black;
+    position: relative;
+    background: {
+      image: url('/images/page-contact.jpg');
+      position-x: center;
+      position-y: 95%;
+      size: cover;
+      repeat: no-repeat;
+    }
+    & > .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      width: 95vw;
+      height: auto;
+      max-height: 100vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+
+      & > h2 {
+        width: 100%;
+        text-align: center;
+        font: {
+          family: $fontNav;
+          size: 3rem;
+        }
+        margin: 1rem;
+        padding: 0;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
+      }
+
+      & > div {
+        text-align: center;
+        border-top: 2px $fontNavColorHover solid;
+        width: 70%;
+        margin: 0;
+        padding: 0;
+      }
+
+      & > div > p {
+        font: {
+          family: $fontDecoration;
+          size: 2rem;
+        }
+        margin: .5rem;
+        padding: 0;
+        color: $fontNavBackground;
+      }
+      & > div > .contact-color {
+        color: $fontNavColorHover;
+      }
+    }
   }
 }
 
 @media only screen and (orientation: portrait) and (max-width: 767px) {
-
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
@@ -250,44 +543,317 @@ a:active {
   }
   // =HEADER
   #sectionHeader {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: yellow;
+    background: {
+      image: url('/images/page-main.jpg');
+      position-x: center;
+      position-y: 55%;
+      size: cover;
+      repeat: no-repeat;
+    }
+    position: relative;
   }
   // =SECTION VIDEO
   #sectionLessonsVideo {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: red;
-  }
-  // =SECTION SKYPE
-  #sectionLessonsSkype {
-    width: 100%;
-    height: 100vh;
-    background: blue;
+    position: absolute;
+    background: {
+      image: url('/images/page-video.jpg');
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
+
+    & > .video-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      width: 75vw;
+      height: auto;
+      max-height: 100vh;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+
+      & > #video {
+        width: 426px;
+        height: 240px;
+      }
+
+      & > h2 {
+        font: {
+          family: $fontNav;
+          size: 4.2rem;
+        }
+        text-align: center;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
+      }
+
+      & > .video-button {
+        font: {
+          family: $fontNav;
+          size: 2rem;
+        }
+        line-height: 2.2rem;
+        color: $background;
+        padding: 1.5rem 5rem;
+        border-radius: $radius;
+        margin: 4rem 0;
+        background-color: #e52d27;
+        transition: $animation;
+
+        &:hover {
+          color: #e52d27;
+          background-color: $background;
+        }
+      }
+    }
   }
   // =STUDENTS SUCCESS
   #sectionSuccessPanel {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: green;
+    background: {
+      image: url('/images/page-success.jpg');
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
   }
   // =REFERENCES
   #sectionReferences {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: {
+      image: url('/images/page-reference.jpg');
+      position-x: center;
+      position-y: 60%;
+      size: cover;
+      repeat: no-repeat;
+    }
+    & > .references-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      position: absolute;
+      width: 75vw;
+      height: auto;
+      max-height: 100vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+
+      & > h2 {
+        font: {
+          family: $fontNav;
+          size: 4.2rem;
+        }
+        text-align: center;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
+      }
+
+      & > .bx-wrapper {
+        & > .bx-viewport {
+          & > .bxslider {
+            & > .references-page {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-content: center;
+              align-items: center;
+              & > .references-paragraph {
+                font: {
+                  family: $fontDecoration;
+                  size: 2.6rem;
+                }
+                line-height: 2.6rem;
+                width: 90%;
+                color: $fontNavBackground;
+              }
+              & > .references-author {
+                font: {
+                  family: $fontNav;
+                  size: 2rem;
+                }
+                color: $fontNavColorHover;
+                margin: 0;
+                padding: 0 0 5rem 0;
+                width: 90%;
+              }
+            }
+          }
+        }
+        & > .bx-controls {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          justify-content: space-between;
+          top: 0;
+          left: 0;
+          font: {
+            family: $fontNav;
+          }
+          & > .bx-controls-direction {
+            & > .bx-prev {
+              display: none;
+            }
+            & > .bx-next {
+              display: none;
+            }
+          }
+          & > .bx-pager {
+            text-align: center;
+            font-size: .85em;
+            font-weight: bold;
+            color: #666;
+            & > .bx-pager-item {
+              margin: 2.5rem 1rem;
+              display: inline-block;
+              vertical-align: bottom;
+              & > .bx-pager-link {
+                font: {
+                  size: 2rem;
+                }
+              }
+              & > .bx-pager-link.active {
+                color: $fontNavColorHover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // =PRICE
+  #sectionPrices {
     width: 100%;
     height: 100vh;
-    background: violet;
+    position: relative;
+    background: {
+      image: url('/images/page-prices.jpg');
+      position-x: center;
+      position-y: 70%;
+      size: cover;
+      repeat: no-repeat;
+    }
+    & > .prices-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      width: 75vw;
+      height: auto;
+      max-height: 100vh;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+
+      & > h2 {
+        font: {
+          family: $fontNav;
+          size: 4rem;
+        }
+        text-align: center;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
+      }
+
+      & > div {
+        text-align: center;
+        border-top: 2px $fontNavColorHover solid;
+        width: 60%;
+      }
+
+      & > div > p {
+        font: {
+          family: $fontDecoration;
+          size: 3rem;
+        }
+        color: $fontNavBackground;
+      }
+
+      & > div > p > .prices-color {
+        color: $fontNavColorHover;
+      }
+    }
   }
   // =CONTACT
   #sectionContact {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: black;
+    position: relative;
+    background: {
+      image: url('/images/page-contact.jpg');
+      position-x: center;
+      position-y: 95%;
+      size: cover;
+      repeat: no-repeat;
+    }
+    & > .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      width: 75vw;
+      height: auto;
+      max-height: 100vh;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+
+      & > h2 {
+        font: {
+          family: $fontNav;
+          size: 4rem;
+        }
+        text-align: center;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
+      }
+
+      & > div {
+        text-align: center;
+        border-top: 2px $fontNavColorHover solid;
+        width: 60%;
+      }
+
+      & > div > p {
+        font: {
+          family: $fontDecoration;
+          size: 3rem;
+        }
+        color: $fontNavBackground;
+      }
+
+      & > div > .contact-color {
+        color: $fontNavColorHover;
+      }
+    }
   }
-}
-
-@media only screen and (orientation: portrait) and (min-width: 768px) and (max-width: 1279px) {
-
 }
 
 @media only screen  and (min-width: 1280px) {
@@ -302,7 +868,7 @@ a:active {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    background:  $fontNavBackground;
+    background: $fontNavBackground;
     border: 0 solid transparent;
     letter-spacing: 1px;
     z-index: 101;
@@ -355,47 +921,24 @@ a:active {
     height: 100vh;
     background: {
       image: url('/images/page-main.jpg');
-      position: center center;
+      position-x: center;
+      position-y: 55%;
       size: cover;
       repeat: no-repeat;
     }
     position: relative;
+  }
 
-    .mainHeader {
-      font : {
-        family: $fontNav;
-        style: italic;
-      }
-      color: $fontNavColor;
-      position: absolute;
-      top: 20%;
-      left: 5%;
-      font-size: 3.6rem;
-    }
-    .mainHeaderName {
-      font: {
-        family: $fontDecoration;
-        size: 6rem;
-      }
-      line-height: 6.6rem;
-      letter-spacing: 1px;
-      color: $fontNavColorHover;
-    }
-    .mainHeaderParagraph {
-      font: {
-        family: $fontNav;
-        style: italic;
-        size: 2.4rem;
-      }
-      color: $fontNavColor;
-      position: absolute;
-      line-height: 2.8rem;
-      top: 60%;
-      right: 5%;
-      width: 25%;
-    }
-    .mainHeaderParagraphColor {
-      color: $fontNavColorHover;
+  .header-wrapper {
+    position: absolute;
+    max-height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & > div > .header-image {
+      position: relative;
+      width: 15%;
     }
   }
   // =SECTION VIDEO
@@ -409,33 +952,55 @@ a:active {
       repeat: no-repeat;
     }
     position: relative;
-    & > iframe {
+    & > .video-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
       position: absolute;
+      width: 50vw;
+      height: auto;
+      max-height: 100vh;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-    }
-    .mainVideo {
-      font: {
-        family: $fontDecoration;
-        size: 3.6rem;
+      background-color: rgba(0, 0, 0, .5);
+      border-radius: $radius;
+
+      & > #video {
+        width: 640px;
+        height: 360px;
       }
-      position: absolute;
-      color: $fontNavColorHover;
-      top: 15%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-  // =SECTION SKYPE
-  #sectionLessonsSkype {
-    width: 100%;
-    height: 100vh;
-    background: {
-      image: url('/images/page-skype.jpg');
-      position: center center;
-      size: cover;
-      repeat: no-repeat;
+
+      & > h2 {
+        font: {
+          family: $fontNav;
+          size: 4.2rem;
+        }
+        text-align: center;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
+      }
+
+      & > .video-button {
+        font: {
+          family: $fontNav;
+          size: 2rem;
+        }
+        line-height: 2.2rem;
+        color: $background;
+        padding: 1.5rem 3rem;
+        border-radius: $radius;
+        margin: 2rem 0;
+        background-color: #e52d27;
+        transition: $animation;
+
+        &:hover {
+          color: $fontNavColor;
+          background-color: $fontNavBackground;
+        }
+      }
     }
   }
   // =STUDENTS SUCCESS
@@ -444,7 +1009,8 @@ a:active {
     height: 100vh;
     background: {
       image: url('/images/page-success.jpg');
-      position: center center;
+      position-x: center;
+      position-y: 70%;
       size: cover;
       repeat: no-repeat;
     }
@@ -453,11 +1019,178 @@ a:active {
   #sectionReferences {
     width: 100%;
     height: 100vh;
+    position: relative;
     background: {
       image: url('/images/page-reference.jpg');
-      position: center center;
+      position-x: center;
+      position-y: 60%;
       size: cover;
       repeat: no-repeat;
+    }
+    & > .references-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      position: absolute;
+      margin-top: 5rem;
+      width: 50vw;
+      height: auto;
+      max-height: 100vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+
+      & > h2 {
+        font: {
+          family: $fontNav;
+          size: 4.2rem;
+        }
+        text-align: center;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
+      }
+
+      & > .bx-wrapper {
+        & > .bx-viewport {
+          & > .bxslider {
+            & > .references-page {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-content: center;
+              align-items: center;
+              & > .references-paragraph {
+                font: {
+                  family: $fontDecoration;
+                  size: 2.6rem;
+                }
+                line-height: 2.6rem;
+                width: 90%;
+                color: $fontNavBackground;
+              }
+              & > .references-author {
+                font: {
+                  family: $fontNav;
+                  size: 2rem;
+                }
+                color: $fontNavColorHover;
+                margin: 0;
+                padding: 0 0 5rem 0;
+                width: 90%;
+              }
+            }
+          }
+        }
+        & > .bx-controls {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          justify-content: space-between;
+          top: 0;
+          left: 0;
+          font: {
+            family: $fontNav;
+          }
+          & > .bx-controls-direction {
+            & > .bx-prev {
+              display: none;
+            }
+            & > .bx-next {
+              display: none;
+            }
+          }
+          & > .bx-pager {
+            text-align: center;
+            font-size: .85em;
+            font-weight: bold;
+            color: #666;
+            & > .bx-pager-item {
+              margin: 2rem 1rem;
+              display: inline-block;
+              vertical-align: bottom;
+              & > .bx-pager-link {
+                font: {
+                  size: 2rem;
+                }
+              }
+              & > .bx-pager-link.active {
+                color: $fontNavColorHover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // =PRICE
+  #sectionPrices {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: {
+      image: url('/images/page-prices.jpg');
+      position-x: center;
+      position-y: 70%;
+      size: cover;
+      repeat: no-repeat;
+    }
+
+    & > .prices-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      margin-top: 5rem;
+      width: 50vw;
+      height: auto;
+      max-height: 100vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+
+      & > h2 {
+        font: {
+          family: $fontNav;
+          size: 4.2rem;
+        }
+        text-align: center;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
+      }
+
+      & > div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        border-top: 2px $fontNavColorHover solid;
+        width: 60%;
+        min-height: 100px;
+      }
+
+      & > div > p {
+        font: {
+          family: $fontDecoration;
+          size: 3.4rem;
+        }
+        margin: calc(3% - 5px);
+        padding: 0;
+        color: $fontNavBackground;
+      }
+
+      & > div > p > .prices-color {
+        color: $fontNavColorHover;
+      }
     }
   }
   // =CONTACT
@@ -467,55 +1200,58 @@ a:active {
     position: relative;
     background: {
       image: url('/images/page-contact.jpg');
-      position: center bottom;
+      position-x: center;
+      position-y: 95%;
       size: cover;
       repeat: no-repeat;
     }
-  }
-  #contactForm {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    & > label {
-      font: {
-        family: $fontNav;
-        size: 2.6rem;
+
+    & > .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      margin-top: 5rem;
+      width: 50vw;
+      height: auto;
+      max-height: 100vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+
+      & > h2 {
+        font: {
+          family: $fontNav;
+          size: 4.2rem;
+        }
+        text-align: center;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
       }
-      text-align: center;
-      padding: 20px 0;
-      color: $fontNavColorHover;
-    }
-    & > input {
-      border-radius: 5px;
-      border: 2px solid $fontNavColorHover;
-      height: 25px;
-    }
-    & > textarea {
-      border-radius: 5px;
-      border: 2px solid $fontNavColorHover;
-      resize: none;
-    }
-    & > [type="submit"] {
-      font: {
-        family: $fontNav;
-        size: 2rem;
+
+      & > div {
+        display: flex;
+        justify-content: center;
+        border-top: 2px $fontNavColorHover solid;
+        width: 60%;
       }
-      margin-top: 20px;
-      color: $fontNavColorHover;
-      background: $fontNavBackgroundHover;
-      border: 2px solid $fontNavColorHover;
-      border-radius: 5px;
-      height: 40px;
-      transition: $animation;
-    }
-    & > [type="submit"]:hover {
-      color: $fontNavColor;
-      background: $fontNavBackground;
-      cursor: pointer;
-      height: 40px;
+
+      &  >  div > p {
+        font: {
+          family: $fontDecoration;
+          size: 3.4rem;
+        }
+        text-align: center;
+        color: $fontNavBackground;
+      }
+
+      & > div > .contact-color {
+        color: $fontNavColorHover;
+      }
     }
   }
 }
