@@ -1,5 +1,26 @@
 @import 'variables';
 
+@font-face {
+  font-family: 'Abril Fatface', cursive;
+  src: url('/app/fonts/Abril_Fatface/AbrilFatface-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ranga', cursive;
+  src: url('/app/fonts/Ranga/Ranga-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url('/app/fonts/Roboto/Roboto-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
