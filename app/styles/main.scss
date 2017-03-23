@@ -28,6 +28,12 @@
   padding: 0.2em 0;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
   background: $background;
@@ -86,10 +92,9 @@ a:active {
     border: 0 solid transparent;
     letter-spacing: 1px;
     z-index: 300;
-    margin-top: 3rem;
-    padding-top: 3rem;
-    height: 100vh;
+    margin-top: 5rem;
     width: 100%;
+    height: calc(100% - 5rem);
     transition: $animation;
 
     & > .navlabel {
@@ -98,16 +103,14 @@ a:active {
       align-items: center;
       background:  $fontNavBackground;
       width: 100%;
-      height: 16.5%;
-      line-height: 16.5%;
+      height: 14.2%;
       text-align: center;
-      min-height: 20px;
-      border-bottom: 1px solid $fontNavColor;
+      border-bottom: 2px solid $fontNavColor;
       z-index: 500;
     }
 
     & > .navlabel:first-child {
-      border-top: 1px solid $fontNavColor;
+      border-top: 2px solid $fontNavColor;
     }
 
     .navlabel:hover {
@@ -119,8 +122,9 @@ a:active {
     .navtext {
       font: {
         family: $fontNav;
-        size: 2rem;
+        size: 1.6rem;
       }
+      line-height: 1.6rem;
       letter-spacing: 1px;
       color: $fontNavColor;
       user-select: none;
@@ -138,7 +142,7 @@ a:active {
     background:  $fontNavBackground;
     cursor: pointer;
     margin: 0 auto;
-    z-index: 400;
+    z-index: 700;
 
     & > .hamburger-panel {
       background-color: $fontNavColor;
@@ -168,7 +172,7 @@ a:active {
     top: 0;
     left: 0;
     width: 100%;
-    height: 3rem;
+    height: 5rem;
     background-color:  $fontNavBackground;
     z-index: -100;
   }
@@ -207,6 +211,7 @@ a:active {
       width: 95vw;
       height: auto;
       max-height: 100vh;
+      margin-top: 2rem;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -221,8 +226,9 @@ a:active {
       & > h2 {
         font: {
           family: $fontNav;
-          size: 4.2rem;
+          size: 2rem;
         }
+        margin: 1rem 0;
         text-align: center;
         color: $fontNavColorHover;
         letter-spacing: 1px;
@@ -231,13 +237,15 @@ a:active {
       & > .video-button {
         font: {
           family: $fontNav;
-          size: 2rem;
+          size: 1.6rem;
         }
-        line-height: 2.2rem;
+        width: 90%;
+        text-align: center;
+        line-height: 2rem;
         color: $background;
-        padding: 1.5rem 3rem;
+        padding: 1.5rem;
         border-radius: $radius;
-        margin: 2rem 0;
+        margin: 2rem 5%;
         background-color: #e52d27;
         transition: $animation;
 
@@ -281,6 +289,7 @@ a:active {
       width: 75vw;
       height: auto;
       max-height: 100vh;
+      margin-top: 2rem;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -290,8 +299,9 @@ a:active {
       & > h2 {
         font: {
           family: $fontNav;
-          size: 3rem;
+          size: 2rem;
         }
+        margin: 1rem 0;
         text-align: center;
         color: $fontNavColorHover;
         letter-spacing: 1px;
@@ -318,7 +328,7 @@ a:active {
               & > .references-author {
                 font: {
                   family: $fontNav;
-                  size: 1.6rem;
+                  size: 1.4rem;
                 }
                 color: $fontNavColorHover;
                 margin: 0;
@@ -393,6 +403,7 @@ a:active {
       width: 95vw;
       height: auto;
       max-height: 100vh;
+      margin-top: 2rem;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -404,7 +415,7 @@ a:active {
         text-align: center;
         font: {
           family: $fontNav;
-          size: 3rem;
+          size: 2rem;
         }
         margin: 1rem;
         padding: 0;
@@ -457,6 +468,7 @@ a:active {
       width: 95vw;
       height: auto;
       max-height: 100vh;
+      margin-top: 2rem;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -477,6 +489,8 @@ a:active {
       }
 
       & > div {
+        display: flex;
+        justify-content: center;
         text-align: center;
         border-top: 2px $fontNavColorHover solid;
         width: 70%;
@@ -489,7 +503,7 @@ a:active {
           family: $fontDecoration;
           size: 2rem;
         }
-        margin: .5rem;
+        margin: 1rem 0;
         padding: 0;
         color: $fontNavBackground;
       }
@@ -579,7 +593,7 @@ a:active {
   #sectionLessonsVideo {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: relative;
     background: {
       image: url('/images/page-video.jpg');
       position: center center;
@@ -611,8 +625,9 @@ a:active {
       & > h2 {
         font: {
           family: $fontNav;
-          size: 4.2rem;
+          size: 4rem;
         }
+        margin: 2rem 0;
         text-align: center;
         color: $fontNavColorHover;
         letter-spacing: 1px;
@@ -680,8 +695,9 @@ a:active {
       & > h2 {
         font: {
           family: $fontNav;
-          size: 4.2rem;
+          size: 4rem;
         }
+        margin: 2rem 0;
         text-align: center;
         color: $fontNavColorHover;
         letter-spacing: 1px;
@@ -794,6 +810,7 @@ a:active {
           family: $fontNav;
           size: 4rem;
         }
+        margin: 2rem 0;
         text-align: center;
         color: $fontNavColorHover;
         letter-spacing: 1px;
@@ -851,6 +868,7 @@ a:active {
           family: $fontNav;
           size: 4rem;
         }
+        margin: 2rem 0;
         text-align: center;
         color: $fontNavColorHover;
         letter-spacing: 1px;
@@ -951,24 +969,255 @@ a:active {
   }
 
   .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     position: absolute;
-    max-height: 90vh;
+    margin-top: 2rem;
+    width: 50vw;
+    max-height: 100vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: $background-wrapper;
+    border-radius: $radius;
 
-    & > div > .header-image {
-      position: relative;
-      width: 15%;
+    & > h2 {
+      font: {
+        family: $fontNav;
+        size: 3rem;
+      }
+      margin: 2rem 0;
+      text-align: center;
+      color: $fontNavColorHover;
+      letter-spacing: 1px;
     }
+    /** VARIABLES
+===================================*/
+    /** RESET AND LAYOUT
+    ===================================*/
+    .bx-wrapper {
+      position: relative;
+      margin-bottom: 60px;
+      padding: 0;
+      *zoom: 1;
+      touch-action: pan-y;
+    }
+    .bx-wrapper img {
+      max-width: 100%;
+      display: block;
+    }
+    .bxslider {
+      margin: 0;
+      padding: 0;
+    }
+    ul.bxslider {
+      list-style: none;
+    }
+    .bx-viewport {
+      /*fix other elements on the page moving (on Chrome)*/
+      -webkit-transform: translatez(0);
+    }
+    /** THEME
+    ===================================*/
+    .bx-wrapper {
+      -moz-box-shadow: 0 0 5px #ccc;
+      -webkit-box-shadow: 0 0 5px #ccc;
+      box-shadow: 0 0 5px #ccc;
+      border: 5px solid $fontNavBackground;
+      background: $fontNavBackground;
+    }
+    .bx-wrapper .bx-pager,
+    .bx-wrapper .bx-controls-auto {
+      position: absolute;
+      width: 100%;
+    }
+    /* LOADER */
+    .bx-wrapper .bx-loading {
+      min-height: 50px;
+      background: $fontNavColor;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2000;
+    }
+    /* PAGER */
+    .bx-wrapper .bx-pager {
+      text-align: center;
+      font-size: .85em;
+      font-weight: bold;
+      color: #666;
+      padding-top: 20px;
+    }
+    .bx-wrapper .bx-pager.bx-default-pager a {
+      background: $fontNavColor;
+      text-indent: -9999px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      outline: 0;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+    .bx-wrapper .bx-pager.bx-default-pager a:hover,
+    .bx-wrapper .bx-pager.bx-default-pager a.active,
+    .bx-wrapper .bx-pager.bx-default-pager a:focus {
+      background: $fontNavColorHover;
+    }
+    .bx-wrapper .bx-pager-item,
+    .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+      display: inline-block;
+      vertical-align: bottom;
+      *zoom: 1;
+      *display: inline;
+    }
+    .bx-wrapper .bx-pager-item {
+      font-size: 0;
+      line-height: 0;
+    }
+    /* DIRECTION CONTROLS (NEXT / PREV) */
+    .bx-wrapper .bx-prev {
+      left: 10px;
+      background: url('images/controls.png') no-repeat 0 -32px;
+    }
+    .bx-wrapper .bx-prev:hover,
+    .bx-wrapper .bx-prev:focus {
+      background-position: 0 0;
+    }
+    .bx-wrapper .bx-next {
+      right: 10px;
+      background: url('images/controls.png') no-repeat -43px -32px;
+    }
+    .bx-wrapper .bx-next:hover,
+    .bx-wrapper .bx-next:focus {
+      background-position: -43px 0;
+    }
+    .bx-wrapper .bx-controls-direction a {
+      position: absolute;
+      top: 50%;
+      margin-top: -16px;
+      outline: 0;
+      width: 32px;
+      height: 32px;
+      text-indent: -9999px;
+      z-index: 9999;
+    }
+    .bx-wrapper .bx-controls-direction a.disabled {
+      display: none;
+    }
+    /* AUTO CONTROLS (START / STOP) */
+    .bx-wrapper .bx-controls-auto {
+      text-align: center;
+    }
+    .bx-wrapper .bx-controls-auto .bx-start {
+      display: block;
+      text-indent: -9999px;
+      width: 10px;
+      height: 11px;
+      outline: 0;
+      background: url('images/controls.png') -86px -11px no-repeat;
+      margin: 0 3px;
+    }
+    .bx-wrapper .bx-controls-auto .bx-start:hover,
+    .bx-wrapper .bx-controls-auto .bx-start.active,
+    .bx-wrapper .bx-controls-auto .bx-start:focus {
+      background-position: -86px 0;
+    }
+    .bx-wrapper .bx-controls-auto .bx-stop {
+      display: block;
+      text-indent: -9999px;
+      width: 9px;
+      height: 11px;
+      outline: 0;
+      background: url('images/controls.png') -86px -44px no-repeat;
+      margin: 0 3px;
+    }
+    .bx-wrapper .bx-controls-auto .bx-stop:hover,
+    .bx-wrapper .bx-controls-auto .bx-stop.active,
+    .bx-wrapper .bx-controls-auto .bx-stop:focus {
+      background-position: -86px -33px;
+    }
+    /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+    .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+      text-align: left;
+      width: 80%;
+    }
+    .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+      right: 0;
+      width: 35px;
+    }
+    /* IMAGE CAPTIONS */
+    .bx-wrapper .bx-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #666;
+      background: $fontNavColor;
+      width: 100%;
+    }
+    .bx-wrapper .bx-caption span {
+      color: $fontNavColor;
+      display: block;
+      font-size: .85em;
+      padding: 10px;
+    }
+
+
+    //& > .bx-viewport {
+    //  & > .bxslider {
+    //    & > .header-image {
+    //      & > img {
+    //        height: 25%;
+    //      }
+    //    }
+    //  }
+    //}
+    //& > .bx-controls {
+    //  position: relative;
+    //  display: flex;
+    //  flex-direction: column;
+    //  width: 100%;
+    //  height: 100%;
+    //  justify-content: space-between;
+    //  top: 0;
+    //  left: 0;
+    //  font: {
+    //    family: $fontNav;
+    //  }
+    //  & > .bx-controls-direction {
+    //    & > .bx-prev {
+    //
+    //    }
+    //    & > .bx-next {
+    //
+    //    }
+    //  }
+    //  & > .bx-pager {
+    //    & > .bx-pager-item {
+    //      & > .bx-pager-link {
+    //
+    //      }
+    //      & > .bx-pager-link.active {
+    //
+    //      }
+    //    }
+    //  }
+    //}
   }
+
   // =SECTION VIDEO
   #sectionLessonsVideo {
     width: 100%;
     height: 100vh;
     background: {
       image: url('/images/page-video.jpg');
-      position: center center;
+      position: center top;
       size: cover;
       repeat: no-repeat;
     }
@@ -997,8 +1246,9 @@ a:active {
       & > h2 {
         font: {
           family: $fontNav;
-          size: 4.2rem;
+          size: 3rem;
         }
+        margin: 2rem 0;
         text-align: center;
         color: $fontNavColorHover;
         letter-spacing: 1px;
@@ -1068,8 +1318,9 @@ a:active {
       & > h2 {
         font: {
           family: $fontNav;
-          size: 4.2rem;
+          size: 3rem;
         }
+        margin: 2rem 0;
         text-align: center;
         color: $fontNavColorHover;
         letter-spacing: 1px;
@@ -1087,9 +1338,9 @@ a:active {
               & > .references-paragraph {
                 font: {
                   family: $fontDecoration;
-                  size: 2.6rem;
+                  size: 2.5rem;
                 }
-                line-height: 2.6rem;
+                line-height: 2.8rem;
                 width: 90%;
                 color: $fontNavBackground;
               }
@@ -1182,8 +1433,9 @@ a:active {
       & > h2 {
         font: {
           family: $fontNav;
-          size: 4.2rem;
+          size: 3rem;
         }
+        margin: 2rem 0;
         text-align: center;
         color: $fontNavColorHover;
         letter-spacing: 1px;
@@ -1202,7 +1454,7 @@ a:active {
       & > div > p {
         font: {
           family: $fontDecoration;
-          size: 3.4rem;
+          size: 3rem;
         }
         margin: calc(3% - 5px);
         padding: 0;
@@ -1247,8 +1499,9 @@ a:active {
       & > h2 {
         font: {
           family: $fontNav;
-          size: 4.2rem;
+          size: 3rem;
         }
+        margin: 2rem 0;
         text-align: center;
         color: $fontNavColorHover;
         letter-spacing: 1px;
@@ -1264,7 +1517,7 @@ a:active {
       &  >  div > p {
         font: {
           family: $fontDecoration;
-          size: 3.4rem;
+          size: 3rem;
         }
         text-align: center;
         color: $fontNavBackground;
