@@ -23,6 +23,19 @@
     <!-- endbuild -->
   </head>
   <body>
+    <section id="sectionLoader">
+      <div id="loader-wrapper">
+        <p class="loader-paragraph">Ładowanie strony</p>
+        <div class="loader-dots">
+          <div class="loader-dot dot_1"></div>
+          <div class="loader-dot dot_2"></div>
+          <div class="loader-dot dot_3"></div>
+          <div class="loader-dot dot_4"></div>
+        </div>
+      </div>
+      <div id="loader_bg_left" class="loader_bg_half"></div>
+      <div id="loader_bg_right" class="loader_bg_half"></div>
+    </section>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -225,6 +238,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

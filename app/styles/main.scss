@@ -286,7 +286,7 @@ a:active {
       align-content: center;
       align-items: center;
       position: absolute;
-      width: 75vw;
+      width: 95vw;
       height: auto;
       max-height: 100vh;
       margin-top: 2rem;
@@ -424,9 +424,12 @@ a:active {
       }
 
       & > div {
+        display: flex;
+        flex-wrap: wrap;
         text-align: center;
+        justify-content: space-between;
         border-top: 2px $fontNavColorHover solid;
-        width: 70%;
+        width: 75%;
         margin: 0;
         padding: 0;
       }
@@ -436,7 +439,8 @@ a:active {
           family: $fontDecoration;
           size: 2rem;
         }
-        margin: .5rem;
+        width: 45%;
+        margin: .5rem 0;
         padding: 0;
         color: $fontNavBackground;
       }
@@ -480,7 +484,7 @@ a:active {
         text-align: center;
         font: {
           family: $fontNav;
-          size: 3rem;
+          size: 2rem;
         }
         margin: 1rem;
         padding: 0;
@@ -493,7 +497,7 @@ a:active {
         justify-content: center;
         text-align: center;
         border-top: 2px $fontNavColorHover solid;
-        width: 70%;
+        width: 75%;
         margin: 0;
         padding: 0;
       }
@@ -503,7 +507,7 @@ a:active {
           family: $fontDecoration;
           size: 2rem;
         }
-        margin: 1rem 0;
+        margin: .5rem 0;
         padding: 0;
         color: $fontNavBackground;
       }
@@ -515,6 +519,16 @@ a:active {
 }
 
 @media only screen and (orientation: portrait) and (max-width: 767px) {
+  // =PRICE
+  #sectionPrices {
+    & > .prices-wrapper {
+      & > div {
+        & > p {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
@@ -1527,5 +1541,136 @@ a:active {
         color: $fontNavColorHover;
       }
     }
+  }
+}
+
+// =LOADER
+
+#sectionLoader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  & > #loader_bg_left { left: 0; }
+  & > #loader_bg_right { right: 0; }
+  & > .loader_bg_half {
+    background: $fontNavBackground;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  & > #loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20rem;
+    z-index: 10001;
+    & > .loader-paragraph {
+      font: {
+        family: $fontNav;
+        size: 3rem;
+      }
+      letter-spacing: 1px;
+      width: 100%;
+      margin: 0 0 3rem 0;
+      color: $fontNavColor;
+      text-align: center;
+    }
+    & > .loader-dots {
+      display: flex;
+      justify-content: center;
+      & > .loader-dot {
+        background: $fontNavColor;
+        float: left;
+        animation-iteration-count: infinite;
+        animation-duration: 650ms;
+        animation-timing-function: ease-in-out;
+        margin: 1rem;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+      }
+      & > .dot_1 {
+        animation-name: dot_1;
+      }
+      & > .dot_2 {
+        animation-name: dot_2;
+      }
+      & > .dot_3 {
+        animation-name: dot_3;
+      }
+      & > .dot_4 {
+        animation-name: dot_4;
+      }
+    }
+  }
+}
+
+@keyframes dot_1 {
+  0% {
+    background: $fontNavColor;
+    transform: translateY(0);
+  }
+  25% {
+    background: $fontNavColorHover;
+    transform: translateY(-10px);
+  }
+  50% {
+    background: $fontNavColor;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dot_2 {
+  25% {
+    background: $fontNavColor;
+    transform: translateY(0);
+  }
+  50% {
+    background: $fontNavColorHover;
+    transform: translateY(-10px);
+  }
+  75% {
+    background: $fontNavColor;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dot_3 {
+  50% {
+    background: $fontNavColor;
+    transform: translateY(0);
+  }
+  75% {
+    background: $fontNavColorHover;
+    transform: translateY(-10px);
+  }
+  100% {
+    background: $fontNavColor;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dot_4 {
+  75% {
+    background: $fontNavColor;
+    transform: translateY(0);
+  }
+  100% {
+    background: $fontNavColorHover;
+    transform: translateY(-10px);
+  }
+  25% {
+    background: $fontNavColor;
+    transform: translateY(0);
   }
 }

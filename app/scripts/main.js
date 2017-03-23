@@ -1,4 +1,11 @@
-//$(document).ready(function() {
+$(document).ready(function() {
+  $('#loader-wrapper').fadeOut(600, function() {
+    $('#loader_bg_left').animate({left: '-50%'}, 400);
+    $('#loader_bg_right').animate({right: '-50%'}, 400, function() {
+      $('#sectionLoader').fadeOut(10);
+    });
+  });
+
   var $menu = $('.hamburger');
   var $navbar = $('.navbar');
 
@@ -41,4 +48,4 @@
   });
   $('#referencesSlider').bxSlider();
 
-//});
+});
