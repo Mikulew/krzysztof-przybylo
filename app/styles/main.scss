@@ -1,26 +1,5 @@
 @import 'variables';
 
-@font-face {
-  font-family: 'Abril Fatface', cursive;
-  src: url('/app/fonts/Abril_Fatface/AbrilFatface-Regular.ttf') format('ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Ranga', cursive;
-  src: url('/app/fonts/Ranga/Ranga-Regular.ttf') format('ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto', sans-serif;
-  src: url('/app/fonts/Roboto/Roboto-Regular.ttf') format('ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -101,7 +80,7 @@ a:active {
       display: flex;
       justify-content: center;
       align-items: center;
-      background:  $fontNavBackground;
+      background: $fontNavBackground;
       width: 100%;
       height: 14.2%;
       text-align: center;
@@ -139,7 +118,7 @@ a:active {
     width: 3rem;
     height: 3rem;
     padding: 1rem;
-    background:  $fontNavBackground;
+    background: $fontNavBackground;
     cursor: pointer;
     margin: 0 auto;
     z-index: 700;
@@ -173,8 +152,30 @@ a:active {
     left: 0;
     width: 100%;
     height: 5rem;
-    background-color:  $fontNavBackground;
+    background-color: $fontNavBackground;
     z-index: -100;
+  }
+  // =GENERALS
+  .page-title {
+    font: {
+      family: $fontNav;
+      size: 2rem;
+    }
+    margin: 1rem 0;
+    text-align: center;
+    color: $fontNavColorHover;
+    letter-spacing: 1px;
+  }
+  .page-paragraph {
+    font: {
+      family: $fontNav;
+      size: 1.6rem;
+    }
+    padding: 0 3rem;
+    margin: 2rem 0;
+    text-align: center;
+    color: $fontNavColorHover;
+    letter-spacing: 1px;
   }
   // =HEADER
   #sectionHeader {
@@ -188,113 +189,21 @@ a:active {
       repeat: no-repeat;
     }
     position: relative;
-  }
-  .header-wrapper, .success-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    position: absolute;
-    margin-top: 2rem;
-    width: 95vw;
-    max-height: 100vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $background-wrapper;
-    border-radius: $radius;
-
-    & > h2 {
-      font: {
-        family: $fontNav;
-        size: 2rem;
-      }
-      margin: 1rem 0;
-      text-align: center;
-      color: $fontNavColorHover;
-      letter-spacing: 1px;
-    }
-    & > .p-hidden {
-      display: block;
-      font: {
-        family: $fontNav;
-        size: 1.8rem;
-      }
-      padding: 1rem;
-      color: $fontNavColorHover;
-      text-align: center;
-    }
-
-    .bx-wrapper {
-      display: none;
-    }
-  }
-  // =SECTION VIDEO
-  #sectionLessonsVideo {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    background: {
-      image: url('/images/page-video.jpg');
-      position: center center;
-      size: cover;
-      repeat: no-repeat;
-    }
-
-    & > .video-wrapper {
+    & > .header-wrapper {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-content: center;
       align-items: center;
-
       position: absolute;
-      width: 95vw;
-      height: auto;
-      max-height: 100vh;
       margin-top: 2rem;
+      width: 95vw;
+      max-height: 100vh;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: $background-wrapper;
       border-radius: $radius;
-
-      & > #video {
-        width: 90%;
-        height: auto;
-      }
-
-      & > h2 {
-        font: {
-          family: $fontNav;
-          size: 2rem;
-        }
-        margin: 1rem 0;
-        text-align: center;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
-      }
-
-      & > .video-button {
-        font: {
-          family: $fontNav;
-          size: 1.6rem;
-        }
-        width: 90%;
-        text-align: center;
-        line-height: 2rem;
-        color: $background;
-        padding: 1.5rem;
-        border-radius: $radius;
-        margin: 2rem 5%;
-        background-color: #e52d27;
-        transition: $animation;
-
-        &:hover {
-          color: #e52d27;
-          background-color: $background;
-        }
-      }
     }
   }
   // =STUDENTS SUCCESS
@@ -308,266 +217,327 @@ a:active {
       size: cover;
       repeat: no-repeat;
     }
-  }
-  // =REFERENCES
-  #sectionReferences {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    background: {
-      image: url('/images/page-reference.jpg');
-      position-x: center;
-      position-y: 60%;
-      size: cover;
-      repeat: no-repeat;
-    }
-    & > .references-wrapper {
+    & > .success-wrapper {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-content: center;
       align-items: center;
       position: absolute;
-      width: 95vw;
-      height: auto;
-      max-height: 100vh;
       margin-top: 2rem;
+      width: 95vw;
+      max-height: 100vh;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: $background-wrapper;
       border-radius: $radius;
-
-      & > h2 {
+      & > .p-hidden {
+        display: block;
         font: {
           family: $fontNav;
-          size: 2rem;
+          size: 1.8rem;
         }
-        margin: 1rem 0;
-        text-align: center;
+        padding: 1rem;
         color: $fontNavColorHover;
-        letter-spacing: 1px;
+        text-align: center;
       }
 
-      & > .bx-wrapper {
-        & > .bx-viewport {
-          & > .bxslider {
-            & > .references-page {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-content: center;
-              align-items: center;
-              & > .references-paragraph {
-                font: {
-                  family: $fontDecoration;
-                  size: 1.6rem;
-                }
-                line-height: 1.6rem;
-                width: 90%;
-                color: $fontNavBackground;
-              }
-              & > .references-author {
-                font: {
-                  family: $fontNav;
-                  size: 1.4rem;
-                }
-                color: $fontNavColorHover;
-                margin: 0;
-                padding: 0;
-                width: 90%;
-              }
-            }
-          }
-        }
-        & > .bx-controls {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          height: 100%;
-          justify-content: space-between;
-          top: 0;
-          left: 0;
-          font: {
-            family: $fontNav;
-          }
-          & > .bx-controls-direction {
-            & > .bx-prev {
-              display: none;
-            }
-            & > .bx-next {
-              display: none;
-            }
-          }
-          & > .bx-pager {
-            text-align: center;
-            font-size: .85em;
-            font-weight: bold;
-            color: #666;
-            & > .bx-pager-item {
-              margin: 2rem 1rem;
-              display: inline-block;
-              vertical-align: bottom;
-              & > .bx-pager-link {
-                font: {
-                  size: 2rem;
-                }
-              }
-              & > .bx-pager-link.active {
-                color: $fontNavColorHover;
-              }
-            }
-          }
-        }
+      .bx-wrapper {
+        display: none;
       }
     }
   }
-  // =PRICE
-  #sectionPrices {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background: {
-      image: url('/images/page-prices.jpg');
-      position-x: center;
-      position-y: 70%;
-      size: cover;
-      repeat: no-repeat;
-    }
-    & > .prices-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
 
-      position: absolute;
-      width: 95vw;
-      height: auto;
-      max-height: 100vh;
-      margin-top: 2rem;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: $background-wrapper;
-      border-radius: $radius;
-
-      & > h2 {
-        width: 100%;
-        text-align: center;
-        font: {
-          family: $fontNav;
-          size: 2rem;
-        }
-        margin: 1rem;
-        padding: 0;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
-      }
-
-      & > div {
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center;
-        justify-content: space-between;
-        border-top: 2px $fontNavColorHover solid;
-        width: 75%;
-        margin: 0;
-        padding: 0;
-      }
-
-      & > div > p {
-        font: {
-          family: $fontDecoration;
-          size: 2rem;
-        }
-        width: 45%;
-        margin: .5rem 0;
-        padding: 0;
-        color: $fontNavBackground;
-      }
-
-      & > div > p > .prices-color {
-        color: $fontNavColorHover;
-      }
-    }
-  }
-  // =CONTACT
-  #sectionContact {
+  // =SECTION VIDEO
+  #sectionLessonsVideo {
     width: 100vw;
     height: 100vh;
     position: relative;
     background: {
-      image: url('/images/page-contact.jpg');
-      position-x: center;
-      position-y: 95%;
+      image: url('/images/page-video.jpg');
+      position: center center;
       size: cover;
       repeat: no-repeat;
     }
-    & > .contact-wrapper {
+    .video-wrapper {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-content: center;
       align-items: center;
-
       position: absolute;
-      width: 95vw;
-      height: auto;
-      max-height: 100vh;
       margin-top: 2rem;
+      width: 95vw;
+      max-height: 100vh;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: $background-wrapper;
       border-radius: $radius;
 
-      & > h2 {
-        width: 100%;
-        text-align: center;
-        font: {
-          family: $fontNav;
-          size: 2rem;
+        & > #video {
+          width: 90%;
+          height: auto;
         }
-        margin: 1rem;
-        padding: 0;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
-      }
+        & > .video-button {
+          font: {
+            family: $fontNav;
+            size: 1.6rem;
+          }
+          width: 90%;
+          text-align: center;
+          line-height: 2rem;
+          padding: 1.5rem;
+          border-radius: $radius;
+          margin: 2rem 5%;
+          color: $fontNavColor;
+          background-color: $fontNavBackground;
+          transition: $animation;
 
-      & > div {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        border-top: 2px $fontNavColorHover solid;
-        width: 75%;
-        margin: 0;
-        padding: 0;
-      }
-
-      & > div > p {
-        font: {
-          family: $fontDecoration;
-          size: 2rem;
+          &:hover {
+            color: $fontNavColorHover;
+            background-color: $fontNavBackgroundHover;
+          }
         }
-        margin: .5rem 0;
-        padding: 0;
-        color: $fontNavBackground;
-      }
-      & > div > .contact-color {
-        color: $fontNavColorHover;
       }
     }
   }
-}
+    // =REFERENCES
+    #sectionReferences {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      background: {
+        image: url('/images/page-reference.jpg');
+        position-x: center;
+        position-y: 60%;
+        size: cover;
+        repeat: no-repeat;
+      }
+      & > .references-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        position: absolute;
+        width: 95vw;
+        height: auto;
+        max-height: 100vh;
+        margin-top: 2rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $background-wrapper;
+        border-radius: $radius;
+        & > .bx-wrapper {
+          & > .bx-viewport {
+            & > .bxslider {
+              & > .references-page {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                & > .references-paragraph {
+                  font: {
+                    family: $fontDecoration;
+                    size: 1.6rem;
+                  }
+                  line-height: 1.6rem;
+                  width: 90%;
+                  color: $fontNavBackground;
+                }
+                & > .references-author {
+                  font: {
+                    family: $fontNav;
+                    size: 1.4rem;
+                  }
+                  color: $fontNavColorHover;
+                  margin: 0;
+                  padding: 0;
+                  width: 90%;
+                }
+              }
+            }
+          }
+          & > .bx-controls {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            justify-content: space-between;
+            top: 0;
+            left: 0;
+            font: {
+              family: $fontNav;
+            }
+            & > .bx-controls-direction {
+              & > .bx-prev {
+                display: none;
+              }
+              & > .bx-next {
+                display: none;
+              }
+            }
+            & > .bx-pager {
+              text-align: center;
+              font-size: .85em;
+              font-weight: bold;
+              color: #666;
+              & > .bx-pager-item {
+                margin: 2rem 1rem;
+                display: inline-block;
+                vertical-align: bottom;
+                & > .bx-pager-link {
+                  font: {
+                    size: 2rem;
+                  }
+                }
+                & > .bx-pager-link.active {
+                  color: $fontNavColorHover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // =PRICE
+    #sectionPrices {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background: {
+        image: url('/images/page-prices.jpg');
+        position-x: center;
+        position-y: 70%;
+        size: cover;
+        repeat: no-repeat;
+      }
+      & > .prices-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        width: 95vw;
+        height: auto;
+        max-height: 100vh;
+        margin-top: 2rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $background-wrapper;
+        border-radius: $radius;
+        & > div {
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center;
+          justify-content: space-between;
+          border-top: 2px $fontNavColorHover solid;
+          width: 75%;
+          margin: 0;
+          padding: 0;
+        }
+
+        & > div > p {
+          font: {
+            family: $fontDecoration;
+            size: 2rem;
+          }
+          width: 45%;
+          margin: .5rem 0;
+          padding: 0;
+          color: $fontNavBackground;
+        }
+
+        & > div > p > .prices-color {
+          color: $fontNavColorHover;
+        }
+      }
+    }
+    // =CONTACT
+    #sectionContact {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      background: {
+        image: url('/images/page-contact.jpg');
+        position-x: center;
+        position-y: 95%;
+        size: cover;
+        repeat: no-repeat;
+      }
+      & > .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        width: 95vw;
+        height: auto;
+        max-height: 100vh;
+        margin-top: 2rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $background-wrapper;
+        border-radius: $radius;
+
+        & > div {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          border-top: 2px $fontNavColorHover solid;
+          width: 75%;
+          margin: 0;
+          padding: 0;
+        }
+
+        & > div > p {
+          font: {
+            family: $fontDecoration;
+            size: 2rem;
+          }
+          margin: .5rem 0;
+          padding: 0;
+          color: $fontNavBackground;
+        }
+        & > div > .contact-color {
+          color: $fontNavColorHover;
+        }
+      }
+    }
 
 @media only screen and (orientation: portrait) and (max-width: 767px) {
-  // =HEADER
-   .header-wrapper, .success-wrapper {
+  // =SUCCESS PANEL
+  #sectionSuccessPanel {
+    .success-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      position: absolute;
+      margin-top: 2rem;
+      width: 95vw;
+      max-height: 100vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+
       & > .p-hidden {
         display: none;
       }
       /** VARIABLES
-===================================*/
+  ===================================*/
       /** RESET AND LAYOUT
       ===================================*/
       .bx-wrapper {
@@ -664,7 +634,7 @@ a:active {
         background-position: 0 -32px;
       }
       .bx-wrapper .bx-next {
-        right:0;
+        right: 0;
         background: url('/images/controls.png') no-repeat -43px -32px;
       }
       .bx-wrapper .bx-next:hover,
@@ -741,6 +711,7 @@ a:active {
         padding: 10px;
       }
     }
+  }
   // =PRICE
   #sectionPrices {
     & > .prices-wrapper {
@@ -764,13 +735,14 @@ a:active {
     top: 0;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    align-content: center;
+    flex-wrap: nowrap;
     background:  $fontNavBackground;
     border: 0 solid transparent;
     letter-spacing: 1px;
     z-index: 101;
     margin: 0;
-    min-height: 50px;
+    min-height: 6rem;
     width: 100vw;
     border-bottom: 1px solid $fontNavColor;
     transition: $animation;
@@ -780,10 +752,10 @@ a:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 1.5rem;
     margin: auto;
     transition: $animation;
-    min-height: 50px;
+    min-height: 6rem;
   }
 
   .navlabel:first-child {
@@ -812,6 +784,28 @@ a:active {
     transition: $animation;
     line-height: 100%;
   }
+  // =GENERAL
+  .page-title {
+    font: {
+      family: $fontNav;
+      size: 4rem;
+    }
+    margin: 2rem 0;
+    text-align: center;
+    color: $fontNavColorHover;
+    letter-spacing: 1px;
+  }
+  .page-paragraph {
+    font: {
+      family: $fontNav;
+      size: 1.6rem;
+    }
+    padding: 0 4rem;
+    margin: 2rem 0;
+    text-align: center;
+    color: $fontNavColorHover;
+    letter-spacing: 1px;
+  }
   // =HEADER
   #sectionHeader {
     width: 100vw;
@@ -825,7 +819,7 @@ a:active {
     }
     position: relative;
   }
-  .header-wrapper, .success-wrapper {
+  .header-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -839,192 +833,208 @@ a:active {
     transform: translate(-50%, -50%);
     background-color: $background-wrapper;
     border-radius: $radius;
-
-    & > h2 {
-      font: {
-        family: $fontNav;
-        size: 4rem;
-      }
-      margin: 2rem 0;
-      text-align: center;
-      color: $fontNavColorHover;
-      letter-spacing: 1px;
+  }
+  // =STUDENTS SUCCESS
+  #sectionSuccessPanel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: {
+      image: url('/images/page-success.jpg');
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
     }
-    & > .p-hidden {
-      display: none;
-    }
-    /** VARIABLES
-===================================*/
-    /** RESET AND LAYOUT
-    ===================================*/
-    .bx-wrapper {
-      position: relative;
-      margin-bottom: 6rem;
-      padding: 0;
-      *zoom: 1;
-      touch-action: pan-y;
-    }
-    .bx-wrapper img {
-      max-width: 100%;
-      display: block;
-    }
-    .bxslider {
-      margin: 0;
-      padding: 0;
-    }
-    ul.bxslider {
-      list-style: none;
-    }
-    .bx-viewport {
-      /*fix other elements on the page moving (on Chrome)*/
-      -webkit-transform: translatez(0);
-    }
-    /** THEME
-    ===================================*/
-    .bx-wrapper {
-      -moz-box-shadow: 0 0 5px #ccc;
-      -webkit-box-shadow: 0 0 5px #ccc;
-      box-shadow: 0 0 5px #ccc;
-      border: 5px solid $fontNavBackground;
-      background: $fontNavBackground;
-    }
-    .bx-wrapper .bx-pager,
-    .bx-wrapper .bx-controls-auto {
+    .success-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
       position: absolute;
-      width: 100%;
-    }
-    /* LOADER */
-    .bx-wrapper .bx-loading {
-      min-height: 50px;
-      background: $fontNavColor;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2000;
-    }
-    /* PAGER */
-    .bx-wrapper .bx-pager {
-      text-align: center;
-      font-size: .85em;
-      font-weight: bold;
-      color: $background;
-      padding-top: 20px;
-    }
-    .bx-wrapper .bx-pager.bx-default-pager a {
-      background: $fontNavColor;
-      text-indent: -9999px;
-      display: block;
-      width: 10px;
-      height: 10px;
-      margin: 0 5px;
-      outline: 0;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      border-radius: 5px;
-    }
-    .bx-wrapper .bx-pager.bx-default-pager a:hover,
-    .bx-wrapper .bx-pager.bx-default-pager a.active,
-    .bx-wrapper .bx-pager.bx-default-pager a:focus {
-      background: $fontNavColorHover;
-    }
-    .bx-wrapper .bx-pager-item,
-    .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
-      display: inline-block;
-      vertical-align: bottom;
-      *zoom: 1;
-      *display: inline;
-    }
-    .bx-wrapper .bx-pager-item {
-      font-size: 0;
-      line-height: 0;
-    }
-    /* DIRECTION CONTROLS (NEXT / PREV) */
-    .bx-wrapper .bx-prev {
-      left: -50px;
-      background: url('/images/controls.png') no-repeat 0 -32px;
-    }
-    .bx-wrapper .bx-prev:hover,
-    .bx-wrapper .bx-prev:focus {
-      background-position: 0 -32px;
-    }
-    .bx-wrapper .bx-next {
-      right: -50px;
-      background: url('/images/controls.png') no-repeat -43px -32px;
-    }
-    .bx-wrapper .bx-next:hover,
-    .bx-wrapper .bx-next:focus {
-      background-position: -43px -32px;
-    }
-    .bx-wrapper .bx-controls-direction a {
-      position: absolute;
+      width: 75vw;
+      max-height: 100vh;
       top: 50%;
-      margin-top: -16px;
-      outline: 0;
-      width: 32px;
-      height: 32px;
-      text-indent: -9999px;
-      z-index: 9999;
-    }
-    .bx-wrapper .bx-controls-direction a.disabled {
-      display: none;
-    }
-    /* AUTO CONTROLS (START / STOP) */
-    .bx-wrapper .bx-controls-auto {
-      text-align: center;
-    }
-    .bx-wrapper .bx-controls-auto .bx-start {
-      display: block;
-      text-indent: -9999px;
-      width: 10px;
-      height: 11px;
-      outline: 0;
-      background: url('/images/controls.png') -86px -11px no-repeat;
-      margin: 0 3px;
-    }
-    .bx-wrapper .bx-controls-auto .bx-start:hover,
-    .bx-wrapper .bx-controls-auto .bx-start.active,
-    .bx-wrapper .bx-controls-auto .bx-start:focus {
-      background-position: -86px 0;
-    }
-    .bx-wrapper .bx-controls-auto .bx-stop {
-      display: block;
-      text-indent: -9999px;
-      width: 9px;
-      height: 11px;
-      outline: 0;
-      background: url('/images/controls.png') -86px -44px no-repeat;
-      margin: 0 3px;
-    }
-    .bx-wrapper .bx-controls-auto .bx-stop:hover,
-    .bx-wrapper .bx-controls-auto .bx-stop.active,
-    .bx-wrapper .bx-controls-auto .bx-stop:focus {
-      background-position: -86px -33px;
-    }
-    /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
-    .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
-      text-align: left;
-      width: 80%;
-    }
-    .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
-      right: 0;
-      width: 35px;
-    }
-    /* IMAGE CAPTIONS */
-    .bx-wrapper .bx-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background: #666;
-      background: $fontNavColor;
-      width: 100%;
-    }
-    .bx-wrapper .bx-caption span {
-      color: $fontNavColor;
-      display: block;
-      font-size: .85em;
-      padding: 10px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
+      & > .p-hidden {
+        display: none;
+      }
+      /** VARIABLES
+  ===================================*/
+      /** RESET AND LAYOUT
+      ===================================*/
+      .bx-wrapper {
+        position: relative;
+        margin-bottom: 6rem;
+        padding: 0;
+        *zoom: 1;
+        touch-action: pan-y;
+      }
+      .bx-wrapper img {
+        max-width: 100%;
+        display: block;
+      }
+      .bxslider {
+        margin: 0;
+        padding: 0;
+      }
+      ul.bxslider {
+        list-style: none;
+      }
+      .bx-viewport {
+        /*fix other elements on the page moving (on Chrome)*/
+        -webkit-transform: translatez(0);
+      }
+      /** THEME
+      ===================================*/
+      .bx-wrapper {
+        -moz-box-shadow: 0 0 5px #ccc;
+        -webkit-box-shadow: 0 0 5px #ccc;
+        box-shadow: 0 0 5px #ccc;
+        border: 5px solid $fontNavBackground;
+        background: $fontNavBackground;
+      }
+      .bx-wrapper .bx-pager,
+      .bx-wrapper .bx-controls-auto {
+        position: absolute;
+        width: 100%;
+      }
+      /* LOADER */
+      .bx-wrapper .bx-loading {
+        min-height: 50px;
+        background: $fontNavColor;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+      }
+      /* PAGER */
+      .bx-wrapper .bx-pager {
+        text-align: center;
+        font-size: .85em;
+        font-weight: bold;
+        color: $background;
+        padding-top: 20px;
+      }
+      .bx-wrapper .bx-pager.bx-default-pager a {
+        background: $fontNavColor;
+        text-indent: -9999px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        outline: 0;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+      }
+      .bx-wrapper .bx-pager.bx-default-pager a:hover,
+      .bx-wrapper .bx-pager.bx-default-pager a.active,
+      .bx-wrapper .bx-pager.bx-default-pager a:focus {
+        background: $fontNavColorHover;
+      }
+      .bx-wrapper .bx-pager-item,
+      .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+        display: inline-block;
+        vertical-align: bottom;
+        *zoom: 1;
+        *display: inline;
+      }
+      .bx-wrapper .bx-pager-item {
+        font-size: 0;
+        line-height: 0;
+      }
+      /* DIRECTION CONTROLS (NEXT / PREV) */
+      .bx-wrapper .bx-prev {
+        left: -50px;
+        background: url('/images/controls.png') no-repeat 0 -32px;
+      }
+      .bx-wrapper .bx-prev:hover,
+      .bx-wrapper .bx-prev:focus {
+        background-position: 0 -32px;
+      }
+      .bx-wrapper .bx-next {
+        right: -50px;
+        background: url('/images/controls.png') no-repeat -43px -32px;
+      }
+      .bx-wrapper .bx-next:hover,
+      .bx-wrapper .bx-next:focus {
+        background-position: -43px -32px;
+      }
+      .bx-wrapper .bx-controls-direction a {
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        outline: 0;
+        width: 32px;
+        height: 32px;
+        text-indent: -9999px;
+        z-index: 9999;
+      }
+      .bx-wrapper .bx-controls-direction a.disabled {
+        display: none;
+      }
+      /* AUTO CONTROLS (START / STOP) */
+      .bx-wrapper .bx-controls-auto {
+        text-align: center;
+      }
+      .bx-wrapper .bx-controls-auto .bx-start {
+        display: block;
+        text-indent: -9999px;
+        width: 10px;
+        height: 11px;
+        outline: 0;
+        background: url('/images/controls.png') -86px -11px no-repeat;
+        margin: 0 3px;
+      }
+      .bx-wrapper .bx-controls-auto .bx-start:hover,
+      .bx-wrapper .bx-controls-auto .bx-start.active,
+      .bx-wrapper .bx-controls-auto .bx-start:focus {
+        background-position: -86px 0;
+      }
+      .bx-wrapper .bx-controls-auto .bx-stop {
+        display: block;
+        text-indent: -9999px;
+        width: 9px;
+        height: 11px;
+        outline: 0;
+        background: url('/images/controls.png') -86px -44px no-repeat;
+        margin: 0 3px;
+      }
+      .bx-wrapper .bx-controls-auto .bx-stop:hover,
+      .bx-wrapper .bx-controls-auto .bx-stop.active,
+      .bx-wrapper .bx-controls-auto .bx-stop:focus {
+        background-position: -86px -33px;
+      }
+      /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+      .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+        text-align: left;
+        width: 80%;
+      }
+      .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+        right: 0;
+        width: 35px;
+      }
+      /* IMAGE CAPTIONS */
+      .bx-wrapper .bx-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #666;
+        background: $fontNavColor;
+        width: 100%;
+      }
+      .bx-wrapper .bx-caption span {
+        color: $fontNavColor;
+        display: block;
+        font-size: .85em;
+        padding: 10px;
+      }
     }
   }
   // =SECTION VIDEO
@@ -1060,47 +1070,24 @@ a:active {
         height: 240px;
       }
 
-      & > h2 {
-        font: {
-          family: $fontNav;
-          size: 4rem;
-        }
-        margin: 2rem 0;
-        text-align: center;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
-      }
-
       & > .video-button {
         font: {
           family: $fontNav;
           size: 2rem;
         }
         line-height: 2.2rem;
-        color: $background;
         padding: 1.5rem 5rem;
         border-radius: $radius;
         margin: 4rem 0;
-        background-color: #e52d27;
+        color: $fontNavColor;
+        background-color: $fontNavBackground;
         transition: $animation;
 
         &:hover {
-          color: #e52d27;
-          background-color: $background;
+          color: $fontNavColorHover;
+          background-color: $fontNavBackgroundHover;
         }
       }
-    }
-  }
-  // =STUDENTS SUCCESS
-  #sectionSuccessPanel {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    background: {
-      image: url('/images/page-success.jpg');
-      position: center center;
-      size: cover;
-      repeat: no-repeat;
     }
   }
   // =REFERENCES
@@ -1130,17 +1117,6 @@ a:active {
       transform: translate(-50%, -50%);
       background-color: $background-wrapper;
       border-radius: $radius;
-
-      & > h2 {
-        font: {
-          family: $fontNav;
-          size: 4rem;
-        }
-        margin: 2rem 0;
-        text-align: center;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
-      }
 
       & > .bx-wrapper {
         & > .bx-viewport {
@@ -1244,17 +1220,6 @@ a:active {
       background-color: $background-wrapper;
       border-radius: $radius;
 
-      & > h2 {
-        font: {
-          family: $fontNav;
-          size: 4rem;
-        }
-        margin: 2rem 0;
-        text-align: center;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
-      }
-
       & > div {
         text-align: center;
         border-top: 2px $fontNavColorHover solid;
@@ -1301,17 +1266,6 @@ a:active {
       transform: translate(-50%, -50%);
       background-color: $background-wrapper;
       border-radius: $radius;
-
-      & > h2 {
-        font: {
-          family: $fontNav;
-          size: 4rem;
-        }
-        margin: 2rem 0;
-        text-align: center;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
-      }
 
       & > div {
         text-align: center;
@@ -1393,6 +1347,28 @@ a:active {
     transition: $animation;
     line-height: 100%;
   }
+  // =GENERAL
+  .page-title {
+    font: {
+      family: $fontNav;
+      size: 3rem;
+    }
+    margin: 2rem 0;
+    text-align: center;
+    color: $fontNavColorHover;
+    letter-spacing: 1px;
+  }
+  .page-paragraph {
+    font: {
+      family: $fontNav;
+      size: 1.6rem;
+    }
+    padding: 0 4rem;
+    margin: 2rem 0;
+    text-align: center;
+    color: $fontNavColorHover;
+    letter-spacing: 1px;
+  }
   // =HEADER
   #sectionHeader {
     width: 100%;
@@ -1405,210 +1381,21 @@ a:active {
       repeat: no-repeat;
     }
     position: relative;
-  }
-
-  .header-wrapper, .success-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    position: absolute;
-    margin-top: 2rem;
-    width: 50vw;
-    max-height: 100vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $background-wrapper;
-    border-radius: $radius;
-
-    & > h2 {
-      font: {
-        family: $fontNav;
-        size: 3rem;
-      }
-      margin: 2rem 0;
-      text-align: center;
-      color: $fontNavColorHover;
-      letter-spacing: 1px;
-    }
-
-    & > .p-hidden {
-      display: none;
-    }
-    /** VARIABLES
-===================================*/
-    /** RESET AND LAYOUT
-    ===================================*/
-    .bx-wrapper {
-      position: relative;
-      margin-bottom: 6rem;
-      padding: 0;
-      *zoom: 1;
-      touch-action: pan-y;
-    }
-    .bx-wrapper img {
-      max-width: 100%;
-      display: block;
-    }
-    .bxslider {
-      margin: 0;
-      padding: 0;
-    }
-    ul.bxslider {
-      list-style: none;
-    }
-    .bx-viewport {
-      /*fix other elements on the page moving (on Chrome)*/
-      -webkit-transform: translatez(0);
-    }
-    /** THEME
-    ===================================*/
-    .bx-wrapper {
-      -moz-box-shadow: 0 0 5px #ccc;
-      -webkit-box-shadow: 0 0 5px #ccc;
-      box-shadow: 0 0 5px #ccc;
-      border: 5px solid $fontNavBackground;
-      background: $fontNavBackground;
-    }
-    .bx-wrapper .bx-pager,
-    .bx-wrapper .bx-controls-auto {
+    & > .header-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
       position: absolute;
-      width: 100%;
-    }
-    /* LOADER */
-    .bx-wrapper .bx-loading {
-      min-height: 50px;
-      background: $fontNavColor;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2000;
-    }
-    /* PAGER */
-    .bx-wrapper .bx-pager {
-      text-align: center;
-      font-size: .85em;
-      font-weight: bold;
-      color: $background;
-      padding-top: 20px;
-    }
-    .bx-wrapper .bx-pager.bx-default-pager a {
-      background: $fontNavColor;
-      text-indent: -9999px;
-      display: block;
-      width: 10px;
-      height: 10px;
-      margin: 0 5px;
-      outline: 0;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      border-radius: 5px;
-    }
-    .bx-wrapper .bx-pager.bx-default-pager a:hover,
-    .bx-wrapper .bx-pager.bx-default-pager a.active,
-    .bx-wrapper .bx-pager.bx-default-pager a:focus {
-      background: $fontNavColorHover;
-    }
-    .bx-wrapper .bx-pager-item,
-    .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
-      display: inline-block;
-      vertical-align: bottom;
-      *zoom: 1;
-      *display: inline;
-    }
-    .bx-wrapper .bx-pager-item {
-      font-size: 0;
-      line-height: 0;
-    }
-    /* DIRECTION CONTROLS (NEXT / PREV) */
-    .bx-wrapper .bx-prev {
-      left: -50px;
-      background: url('/images/controls.png') no-repeat 0 -32px;
-    }
-    .bx-wrapper .bx-prev:hover,
-    .bx-wrapper .bx-prev:focus {
-      background-position: 0 -32px;
-    }
-    .bx-wrapper .bx-next {
-      right: -50px;
-      background: url('/images/controls.png') no-repeat -43px -32px;
-    }
-    .bx-wrapper .bx-next:hover,
-    .bx-wrapper .bx-next:focus {
-      background-position: -43px -32px;
-    }
-    .bx-wrapper .bx-controls-direction a {
-      position: absolute;
+      margin-top: 2rem;
+      width: 50vw;
+      max-height: 100vh;
       top: 50%;
-      margin-top: -16px;
-      outline: 0;
-      width: 32px;
-      height: 32px;
-      text-indent: -9999px;
-      z-index: 9999;
-    }
-    .bx-wrapper .bx-controls-direction a.disabled {
-      display: none;
-    }
-    /* AUTO CONTROLS (START / STOP) */
-    .bx-wrapper .bx-controls-auto {
-      text-align: center;
-    }
-    .bx-wrapper .bx-controls-auto .bx-start {
-      display: block;
-      text-indent: -9999px;
-      width: 10px;
-      height: 11px;
-      outline: 0;
-      background: url('/images/controls.png') -86px -11px no-repeat;
-      margin: 0 3px;
-    }
-    .bx-wrapper .bx-controls-auto .bx-start:hover,
-    .bx-wrapper .bx-controls-auto .bx-start.active,
-    .bx-wrapper .bx-controls-auto .bx-start:focus {
-      background-position: -86px 0;
-    }
-    .bx-wrapper .bx-controls-auto .bx-stop {
-      display: block;
-      text-indent: -9999px;
-      width: 9px;
-      height: 11px;
-      outline: 0;
-      background: url('/images/controls.png') -86px -44px no-repeat;
-      margin: 0 3px;
-    }
-    .bx-wrapper .bx-controls-auto .bx-stop:hover,
-    .bx-wrapper .bx-controls-auto .bx-stop.active,
-    .bx-wrapper .bx-controls-auto .bx-stop:focus {
-      background-position: -86px -33px;
-    }
-    /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
-    .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
-      text-align: left;
-      width: 80%;
-    }
-    .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
-      right: 0;
-      width: 35px;
-    }
-    /* IMAGE CAPTIONS */
-    .bx-wrapper .bx-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background: #666;
-      background: $fontNavColor;
-      width: 100%;
-    }
-    .bx-wrapper .bx-caption span {
-      color: $fontNavColor;
-      display: block;
-      font-size: .85em;
-      padding: 10px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $background-wrapper;
+      border-radius: $radius;
     }
   }
 
@@ -1618,7 +1405,8 @@ a:active {
     height: 100vh;
     background: {
       image: url('/images/page-video.jpg');
-      position: center top;
+      position-x: center;
+      position-y: 55%;
       size: cover;
       repeat: no-repeat;
     }
@@ -1644,33 +1432,22 @@ a:active {
         height: 360px;
       }
 
-      & > h2 {
-        font: {
-          family: $fontNav;
-          size: 3rem;
-        }
-        margin: 2rem 0;
-        text-align: center;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
-      }
-
       & > .video-button {
         font: {
           family: $fontNav;
           size: 2rem;
         }
         line-height: 2.2rem;
-        color: $background;
         padding: 1.5rem 3rem;
         border-radius: $radius;
         margin: 2rem 0;
-        background-color: #e52d27;
+        color: $fontNavColor;
+        background-color: $fontNavBackground;
         transition: $animation;
 
         &:hover {
-          color: $fontNavColor;
-          background-color: $fontNavBackground;
+          color: $fontNavColorHover;
+          background-color: $fontNavBackgroundHover;
         }
       }
     }
@@ -1703,15 +1480,181 @@ a:active {
       transform: translate(-50%, -50%);
       background-color: $background-wrapper;
       border-radius: $radius;
-      & > h2 {
-        font: {
-          family: $fontNav;
-          size: 3rem;
-        }
-        margin: 2rem 0;
+      & > .p-hidden {
+        display: none;
+      }
+      /** VARIABLES
+  ===================================*/
+      /** RESET AND LAYOUT
+      ===================================*/
+      .bx-wrapper {
+        position: relative;
+        margin-bottom: 6rem;
+        padding: 0;
+        *zoom: 1;
+        touch-action: pan-y;
+      }
+      .bx-wrapper img {
+        max-width: 100%;
+        display: block;
+      }
+      .bxslider {
+        margin: 0;
+        padding: 0;
+      }
+      ul.bxslider {
+        list-style: none;
+      }
+      .bx-viewport {
+        /*fix other elements on the page moving (on Chrome)*/
+        -webkit-transform: translatez(0);
+      }
+      /** THEME
+      ===================================*/
+      .bx-wrapper {
+        -moz-box-shadow: 0 0 5px #ccc;
+        -webkit-box-shadow: 0 0 5px #ccc;
+        box-shadow: 0 0 5px #ccc;
+        border: 5px solid $fontNavBackground;
+        background: $fontNavBackground;
+      }
+      .bx-wrapper .bx-pager,
+      .bx-wrapper .bx-controls-auto {
+        position: absolute;
+        width: 100%;
+      }
+      /* LOADER */
+      .bx-wrapper .bx-loading {
+        min-height: 50px;
+        background: $fontNavColor;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+      }
+      /* PAGER */
+      .bx-wrapper .bx-pager {
         text-align: center;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
+        font-size: .85em;
+        font-weight: bold;
+        color: $background;
+        padding-top: 20px;
+      }
+      .bx-wrapper .bx-pager.bx-default-pager a {
+        background: $fontNavColor;
+        text-indent: -9999px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        outline: 0;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+      }
+      .bx-wrapper .bx-pager.bx-default-pager a:hover,
+      .bx-wrapper .bx-pager.bx-default-pager a.active,
+      .bx-wrapper .bx-pager.bx-default-pager a:focus {
+        background: $fontNavColorHover;
+      }
+      .bx-wrapper .bx-pager-item,
+      .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+        display: inline-block;
+        vertical-align: bottom;
+        *zoom: 1;
+        *display: inline;
+      }
+      .bx-wrapper .bx-pager-item {
+        font-size: 0;
+        line-height: 0;
+      }
+      /* DIRECTION CONTROLS (NEXT / PREV) */
+      .bx-wrapper .bx-prev {
+        left: -50px;
+        background: url('/images/controls.png') no-repeat 0 -32px;
+      }
+      .bx-wrapper .bx-prev:hover,
+      .bx-wrapper .bx-prev:focus {
+        background-position: 0 -32px;
+      }
+      .bx-wrapper .bx-next {
+        right: -50px;
+        background: url('/images/controls.png') no-repeat -43px -32px;
+      }
+      .bx-wrapper .bx-next:hover,
+      .bx-wrapper .bx-next:focus {
+        background-position: -43px -32px;
+      }
+      .bx-wrapper .bx-controls-direction a {
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        outline: 0;
+        width: 32px;
+        height: 32px;
+        text-indent: -9999px;
+        z-index: 9999;
+      }
+      .bx-wrapper .bx-controls-direction a.disabled {
+        display: none;
+      }
+      /* AUTO CONTROLS (START / STOP) */
+      .bx-wrapper .bx-controls-auto {
+        text-align: center;
+      }
+      .bx-wrapper .bx-controls-auto .bx-start {
+        display: block;
+        text-indent: -9999px;
+        width: 10px;
+        height: 11px;
+        outline: 0;
+        background: url('/images/controls.png') -86px -11px no-repeat;
+        margin: 0 3px;
+      }
+      .bx-wrapper .bx-controls-auto .bx-start:hover,
+      .bx-wrapper .bx-controls-auto .bx-start.active,
+      .bx-wrapper .bx-controls-auto .bx-start:focus {
+        background-position: -86px 0;
+      }
+      .bx-wrapper .bx-controls-auto .bx-stop {
+        display: block;
+        text-indent: -9999px;
+        width: 9px;
+        height: 11px;
+        outline: 0;
+        background: url('/images/controls.png') -86px -44px no-repeat;
+        margin: 0 3px;
+      }
+      .bx-wrapper .bx-controls-auto .bx-stop:hover,
+      .bx-wrapper .bx-controls-auto .bx-stop.active,
+      .bx-wrapper .bx-controls-auto .bx-stop:focus {
+        background-position: -86px -33px;
+      }
+      /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+      .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+        text-align: left;
+        width: 80%;
+      }
+      .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+        right: 0;
+        width: 35px;
+      }
+      /* IMAGE CAPTIONS */
+      .bx-wrapper .bx-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #666;
+        background: $fontNavColor;
+        width: 100%;
+      }
+      .bx-wrapper .bx-caption span {
+        color: $fontNavColor;
+        display: block;
+        font-size: .85em;
+        padding: 10px;
       }
     }
   }
@@ -1744,17 +1687,6 @@ a:active {
       background-color: $background-wrapper;
       border-radius: $radius;
 
-      & > h2 {
-        font: {
-          family: $fontNav;
-          size: 3rem;
-        }
-        margin: 2rem 0;
-        text-align: center;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
-      }
-
       & > .bx-wrapper {
         & > .bx-viewport {
           & > .bxslider {
@@ -1779,7 +1711,7 @@ a:active {
                   size: 2rem;
                 }
                 color: $fontNavColorHover;
-                margin: 0;
+                margin-top: 1rem;
                 padding: 0 0 5rem 0;
                 width: 90%;
               }
@@ -1859,17 +1791,6 @@ a:active {
       background-color: $background-wrapper;
       border-radius: $radius;
 
-      & > h2 {
-        font: {
-          family: $fontNav;
-          size: 3rem;
-        }
-        margin: 2rem 0;
-        text-align: center;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
-      }
-
       & > div {
         display: flex;
         justify-content: space-around;
@@ -1925,17 +1846,6 @@ a:active {
       background-color: $background-wrapper;
       border-radius: $radius;
 
-      & > h2 {
-        font: {
-          family: $fontNav;
-          size: 3rem;
-        }
-        margin: 2rem 0;
-        text-align: center;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
-      }
-
       & > div {
         display: flex;
         justify-content: center;
@@ -1943,7 +1853,7 @@ a:active {
         width: 60%;
       }
 
-      &  >  div > p {
+      & > div > p {
         font: {
           family: $fontDecoration;
           size: 3rem;
@@ -1954,6 +1864,22 @@ a:active {
 
       & > div > .contact-color {
         color: $fontNavColorHover;
+      }
+    }
+  }
+  // =GALLERY
+  .gallery-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100vw;
+    min-height: 100%;
+    & > .gallery-image-container {
+      display: block;
+      border: 1px solid $fontNavColor;
+      margin: 2rem;
+      & > .gallery-image {
+       height: 100%;
       }
     }
   }
