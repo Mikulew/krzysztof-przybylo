@@ -1368,6 +1368,19 @@ a:active {
     text-align: center;
     color: $fontNavColorHover;
     letter-spacing: 1px;
+    overflow: hidden;
+  }
+  .page-link {
+    font: {
+      family: $fontNav;
+      size: 1.6rem;
+    }
+    text-align: center;
+    color: $fontNavColor;
+    letter-spacing: 1px;
+    &:hover {
+      color: $fontNavBackgroundHover;
+    }
   }
   // =HEADER
   #sectionHeader {
@@ -1388,7 +1401,8 @@ a:active {
       align-content: center;
       align-items: center;
       position: absolute;
-      margin-top: 2rem;
+      margin-top: 5rem;
+      padding-bottom: 2rem;
       width: 50vw;
       max-height: 100vh;
       top: 50%;
@@ -1396,6 +1410,26 @@ a:active {
       transform: translate(-50%, -50%);
       background-color: $background-wrapper;
       border-radius: $radius;
+      & > .header-text {
+        font: {
+          family: $fontNav;
+          size: 1.6rem;
+        }
+        padding: 0 2rem;
+        margin: 2rem 0;
+        text-align: center;
+        color: $fontNavColorHover;
+        letter-spacing: 1px;
+        overflow: hidden;
+        & > ol {
+          & > li {
+            list-style-type: none;
+          }
+        }
+      }
+      & > .page-link {
+        position: relative;
+      }
     }
   }
 
@@ -1424,7 +1458,7 @@ a:active {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, .5);
+      background-color: $background-wrapper;
       border-radius: $radius;
 
       & > #video {
@@ -1689,6 +1723,7 @@ a:active {
 
       & > .bx-wrapper {
         & > .bx-viewport {
+          height: 90vh;
           & > .bxslider {
             & > .references-page {
               display: flex;
@@ -1699,9 +1734,9 @@ a:active {
               & > .references-paragraph {
                 font: {
                   family: $fontDecoration;
-                  size: 2.5rem;
+                  size: 2.4rem;
                 }
-                line-height: 2.8rem;
+                line-height: 2.4rem;
                 width: 90%;
                 color: $fontNavBackground;
               }
@@ -1712,7 +1747,7 @@ a:active {
                 }
                 color: $fontNavColorHover;
                 margin-top: 1rem;
-                padding: 0 0 5rem 0;
+                padding: 0 0 2rem 0;
                 width: 90%;
               }
             }
@@ -1798,7 +1833,6 @@ a:active {
         flex-direction: column;
         border-top: 2px $fontNavColorHover solid;
         width: 60%;
-        min-height: 100px;
       }
 
       & > div > p {
@@ -1806,8 +1840,7 @@ a:active {
           family: $fontDecoration;
           size: 3rem;
         }
-        margin: calc(3% - 5px);
-        padding: 0;
+        width: 100%;
         color: $fontNavBackground;
       }
 
@@ -1869,19 +1902,29 @@ a:active {
   }
   // =GALLERY
   .gallery-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 100vw;
-    min-height: 100%;
-    & > .gallery-image-container {
-      display: block;
-      border: 1px solid $fontNavColor;
-      margin: 2rem;
-      & > .gallery-image {
-       height: 100%;
+    background: #100000;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    & > .glide {
+      & > .glide__wrapper {
+        & > .glide__track {
+          & > .glide__slide {
+            & > .gallery-image {
+              display: block;
+              margin: 0 auto;
+              height: 100vh;
+            }
+          }
+        }
       }
     }
+  }
+  #back {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    translateX: (-50%);
   }
 }
 
