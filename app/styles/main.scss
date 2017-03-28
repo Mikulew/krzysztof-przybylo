@@ -1389,7 +1389,7 @@ a:active {
     background: {
       image: url('/images/page-main.jpg');
       position-x: center;
-      position-y: 55%;
+      position-y: 20%;
       size: cover;
       repeat: no-repeat;
     }
@@ -1397,30 +1397,29 @@ a:active {
     & > .header-wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-content: center;
       align-items: center;
       position: absolute;
-      margin-top: 5rem;
-      padding-bottom: 2rem;
       width: 50vw;
-      max-height: 100vh;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: $background-wrapper;
+      max-height: 98vh;
+      top: 5rem;
+      left: 0;
+      //background-color: $background-wrapper;
       border-radius: $radius;
       & > .header-text {
         font: {
-          family: $fontNav;
+          family: $fontText;
           size: 1.6rem;
         }
+        text-align: left;
         padding: 0 2rem;
-        margin: 2rem 0;
-        text-align: center;
-        color: $fontNavColorHover;
-        letter-spacing: 1px;
+        margin: 1rem 0;
+        color: #000000;
         overflow: hidden;
+        & > p {
+          margin: .5rem 0;
+        }
         & > ol {
           & > li {
             list-style-type: none;
@@ -1440,7 +1439,7 @@ a:active {
     background: {
       image: url('/images/page-video.jpg');
       position-x: center;
-      position-y: 55%;
+      position-y: 20%;
       size: cover;
       repeat: no-repeat;
     }
@@ -1452,13 +1451,13 @@ a:active {
       align-items: center;
       padding-bottom: 1rem;
       position: absolute;
-      width: 50vw;
+      width: 30vw;
       height: auto;
       max-height: 100vh;
-      top: 50%;
-      left: 50%;
+      top: 54%;
+      left: 20%;
       transform: translate(-50%, -50%);
-      background-color: $background-wrapper;
+      //background-color: $background-wrapper;
       border-radius: $radius;
 
       & > #video {
@@ -1804,7 +1803,7 @@ a:active {
     background: {
       image: url('/images/page-prices.jpg');
       position-x: center;
-      position-y: 70%;
+      position-y: top;
       size: cover;
       repeat: no-repeat;
     }
@@ -1870,11 +1869,11 @@ a:active {
       padding-bottom: 1rem;
       position: absolute;
       margin-top: 5rem;
-      width: 50vw;
+      width: 35%;
       height: auto;
       max-height: 100vh;
       top: 50%;
-      left: 50%;
+      left: 80%;
       transform: translate(-50%, -50%);
       background-color: $background-wrapper;
       border-radius: $radius;
@@ -1922,9 +1921,23 @@ a:active {
   }
   #back {
     position: absolute;
-    bottom: 10px;
+    bottom: 2%;
     left: 50%;
-    translateX: (-50%);
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #E4CC8A;
+    text-transform: uppercase;
+    font: 12px Arial, sans-serif;
+    padding: 9px 12px;
+    background-color: transparent;
+    border: 2px solid rgba(89, 80, 54, 0.8);
+    border-radius: 4px;
+    opacity: 1;
+    -webkit-transition: opacity 150ms ease, border 300ms ease-in-out;
+    transition: opacity 150ms ease, border 300ms ease-in-out;
+    &:hover {
+      border-color: #E4CC8A;
+    }
   }
 }
 
