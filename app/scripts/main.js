@@ -59,9 +59,9 @@ $(document).ready(function() {
 //$(document).ready(function() {
   var headerWrapper = $('.header-wrapper'),
       openHeight = headerWrapper.innerHeight() + 'px',
-      closeHeight = '50%',
+      closeHeight = '30%',
       openWidth = '98vw',
-      closeWidth = '50vw',
+      closeWidth = '40vw',
       moreText = 'Czytaj więcej',
       lessText = 'Zwiń',
       duration = '1500',

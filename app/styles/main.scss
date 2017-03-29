@@ -103,6 +103,7 @@ a:active {
         family: $fontNav;
         size: 1.6rem;
       }
+      text-transform: uppercase;
       line-height: 1.6rem;
       letter-spacing: 1px;
       color: $fontNavColor;
@@ -177,6 +178,18 @@ a:active {
     color: $fontNavColorHover;
     letter-spacing: 1px;
   }
+  .page-link {
+    font: {
+      family: $fontNav;
+      size: 1.6rem;
+    }
+    text-align: center;
+    color: $fontNavColor;
+    letter-spacing: 1px;
+    &:hover {
+      color: $fontNavBackgroundHover;
+    }
+  }
   // =HEADER
   #sectionHeader {
     width: 100vw;
@@ -197,13 +210,32 @@ a:active {
       align-items: center;
       position: absolute;
       margin-top: 2rem;
-      width: 95vw;
+      width: 50vw;
       max-height: 100vh;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: $background-wrapper;
       border-radius: $radius;
+      & > .header-text {
+        font: {
+          family: $fontText;
+          size: 1.6rem;
+        }
+        text-align: left;
+        padding: 0 2rem;
+        margin: 1rem 0;
+        color: $fontNavColor;
+        overflow: hidden;
+        & > p {
+          margin: .5rem 0;
+          & > ol {
+            & > li {
+              list-style-type: none;
+            }
+          }
+        }
+      }
     }
   }
   // =STUDENTS SUCCESS
@@ -513,6 +545,47 @@ a:active {
         }
       }
     }
+// =GALLERY
+.gallery-wrapper {
+  background: #100000;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  & > .glide {
+    & > .glide__wrapper {
+      & > .glide__track {
+        & > .glide__slide {
+          & > .gallery-image {
+            display: block;
+            margin: 0 auto;
+            height: 100vh;
+          }
+        }
+      }
+    }
+  }
+}
+#back {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #E4CC8A;
+  text-transform: uppercase;
+  font: 12px Arial, sans-serif;
+  padding: 9px 12px;
+  background-color: transparent;
+  border: 2px solid rgba(89, 80, 54, 0.8);
+  border-radius: 4px;
+  opacity: 1;
+  -webkit-transition: opacity 150ms ease, border 300ms ease-in-out;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  &:hover {
+    border-color: #E4CC8A;
+  }
+}
+
 
 @media only screen and (orientation: portrait) and (max-width: 767px) {
   // =SUCCESS PANEL
@@ -778,6 +851,7 @@ a:active {
       family: $fontNav;
       size: 1.6rem;
     }
+    text-transform: uppercase;
     letter-spacing: 1px;
     color: $fontNavColor;
     user-select: none;
@@ -826,13 +900,32 @@ a:active {
     align-content: center;
     align-items: center;
     position: absolute;
-    width: 75vw;
+    width: 25vw;
     max-height: 100vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: $background-wrapper;
     border-radius: $radius;
+    & > .header-text {
+      font: {
+        family: $fontText;
+        size: 1.6rem;
+      }
+      text-align: left;
+      padding: 0 2rem;
+      margin: 1rem 0;
+      color: $fontNavColor;
+      overflow: hidden;
+      & > p {
+        margin: .5rem 0;
+        & > ol {
+          & > li {
+            list-style-type: none;
+          }
+        }
+      }
+    }
   }
   // =STUDENTS SUCCESS
   #sectionSuccessPanel {
@@ -841,7 +934,8 @@ a:active {
     position: relative;
     background: {
       image: url('/images/page-success.jpg');
-      position: center center;
+      position-x: center;
+      position-y: 60%;
       size: cover;
       repeat: no-repeat;
     }
@@ -1286,6 +1380,46 @@ a:active {
       }
     }
   }
+  // =GALLERY
+  .gallery-wrapper {
+    background: #100000;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    & > .glide {
+      & > .glide__wrapper {
+        & > .glide__track {
+          & > .glide__slide {
+            & > .gallery-image {
+              display: block;
+              margin: 0 auto;
+              height: 100vh;
+            }
+          }
+        }
+      }
+    }
+  }
+  #back {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #E4CC8A;
+    text-transform: uppercase;
+    font: 12px Arial, sans-serif;
+    padding: 9px 12px;
+    background-color: transparent;
+    border: 2px solid rgba(89, 80, 54, 0.8);
+    border-radius: 4px;
+    opacity: 1;
+    -webkit-transition: opacity 150ms ease, border 300ms ease-in-out;
+    transition: opacity 150ms ease, border 300ms ease-in-out;
+    &:hover {
+      border-color: #E4CC8A;
+    }
+  }
 }
 
 @media only screen  and (min-width: 1280px) {
@@ -1341,6 +1475,7 @@ a:active {
       family: $fontNav;
       size: 1.6rem;
     }
+    text-transform: uppercase;
     letter-spacing: 1px;
     color: $fontNavColor;
     user-select: none;
@@ -1401,7 +1536,7 @@ a:active {
       align-content: center;
       align-items: center;
       position: absolute;
-      width: 50vw;
+      width: 40vw;
       max-height: 98vh;
       top: 5rem;
       left: 0;
@@ -1415,19 +1550,16 @@ a:active {
         text-align: left;
         padding: 0 2rem;
         margin: 1rem 0;
-        color: #000000;
+        color: $fontNavColor;
         overflow: hidden;
         & > p {
           margin: .5rem 0;
-        }
-        & > ol {
-          & > li {
-            list-style-type: none;
+          & > ol {
+            & > li {
+              list-style-type: none;
+            }
           }
         }
-      }
-      & > .page-link {
-        position: relative;
       }
     }
   }
