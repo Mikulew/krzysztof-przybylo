@@ -193,7 +193,7 @@ a:active {
   // =HEADER
   #sectionHeader {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: {
       image: url('/images/page-main.jpg');
       position-x: center;
@@ -211,7 +211,6 @@ a:active {
       position: absolute;
       margin-top: 2rem;
       width: 50vw;
-      max-height: 100vh;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -227,6 +226,7 @@ a:active {
         margin: 1rem 0;
         color: $fontNavColor;
         overflow: hidden;
+        text-overflow: ellipsis;
         & > p {
           margin: .5rem 0;
           & > ol {
@@ -567,7 +567,7 @@ a:active {
 }
 #back {
   position: absolute;
-  top: 2%;
+  bottom: 90%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -917,6 +917,7 @@ a:active {
       margin: 1rem 0;
       color: $fontNavColor;
       overflow: hidden;
+      text-overflow: ellipsis;
       & > p {
         margin: .5rem 0;
         & > ol {
@@ -1540,7 +1541,7 @@ a:active {
       max-height: 98vh;
       top: 5rem;
       left: 0;
-      //background-color: $background-wrapper;
+      background-color: $background-wrapper;
       border-radius: $radius;
       & > .header-text {
         font: {
@@ -1550,14 +1551,23 @@ a:active {
         text-align: left;
         padding: 0 2rem;
         margin: 1rem 0;
-        color: $fontNavColor;
+        color: $fontNavColorHover;
         overflow: hidden;
+        text-overflow: ellipsis;
         & > p {
           margin: .5rem 0;
-          & > ol {
-            & > li {
-              list-style-type: none;
+          & > .page-link-gallery {
+            font: {
+              family: $fontText;
+              size: 1.6rem;
+              weight: 700;
             }
+            color: $fontLink;
+          }
+        }
+        & > ol {
+          & > li {
+            list-style-type: none;
           }
         }
       }
@@ -1915,6 +1925,7 @@ a:active {
               vertical-align: bottom;
               & > .bx-pager-link {
                 font: {
+                  family: $fontText;
                   size: 2rem;
                 }
               }
