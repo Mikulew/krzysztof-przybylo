@@ -57,11 +57,13 @@ $(document).ready(function() {
   });
 
 //$(document).ready(function() {
-  var headerWrapper = $('.header-wrapper'),
+  var headerWrapper = $('#header-desktop'),
+    // height
       openHeight = headerWrapper.innerHeight() + 'px',
       closeHeight = '30%',
-      openWidth = '60vw',
-      closeWidth = '50vw',
+    // width
+      openWidth = '50vw',
+      closeWidth = '35vw',
       moreText = 'Czytaj więcej',
       lessText = 'Zwiń',
       duration = '1500',
