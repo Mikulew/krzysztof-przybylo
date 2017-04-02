@@ -1506,18 +1506,6 @@ a:active {
     letter-spacing: 1px;
     overflow: hidden;
   }
-  .page-link {
-    font: {
-      family: $fontNav;
-      size: 1.6rem;
-    }
-    text-align: center;
-    color: $fontNavColor;
-    letter-spacing: 1px;
-    &:hover {
-      color: $fontNavBackgroundHover;
-    }
-  }
   // =HEADER
   #sectionHeader {
     width: 100%;
@@ -1569,6 +1557,18 @@ a:active {
         & > ol {
           & > li {
             list-style-type: none;
+          }
+        }
+        .page-link {
+          font: {
+            family: $fontNav;
+            size: 1.6rem;
+          }
+          text-align: center;
+          color: $fontNavColor;
+          letter-spacing: 1px;
+          &:hover {
+            color: $fontNavBackgroundHover;
           }
         }
       }
