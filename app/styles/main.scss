@@ -212,8 +212,8 @@ a:active {
       align-content: center;
       align-items: center;
       position: absolute;
-      margin-top: 5rem;
-      width: 100vw;
+      margin-top: 25%;
+      min-width: 100vw;
       background-color: $background-wrapper;
       border-radius: $radius;
       z-index: 200;
