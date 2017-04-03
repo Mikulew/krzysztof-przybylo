@@ -206,13 +206,18 @@ a:active {
       display: none;
     }
     & > #header-mobile {
+      margin-top: 45vh;
+    }
+    & > #header-mobile-about {
+      margin-top: 1rem;
+    }
+    & > #header-mobile, & > #header-mobile-about {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-content: center;
       align-items: center;
       position: absolute;
-      margin-top: 25%;
       min-width: 100vw;
       background-color: $background-wrapper;
       border-radius: $radius;
