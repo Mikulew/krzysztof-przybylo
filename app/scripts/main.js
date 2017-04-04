@@ -70,7 +70,7 @@ $(document).ready(function() {
       easing = 'ease-in-out';
 
     headerWrapper.data('fullHeight', headerWrapper.height()).css('height', closeHeight);
-    headerWrapper.children().last().after('<a href=\"#\" class=\"page-link more-link closed\">' + moreText + '</a>');
+    headerWrapper.children().last().after('<a href=\"#\" class=\"page-link-more closed\">' + moreText + '</a>');
 
     var openSlider = function() {
       var link = $(this);
@@ -88,7 +88,7 @@ $(document).ready(function() {
       link.bind('click', openSlider);
     };
 
-    $('.more-link').bind('click', openSlider);
+    $('.page-link-more').bind('click', openSlider);
 
 //});
 

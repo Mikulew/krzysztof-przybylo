@@ -34,20 +34,18 @@ img, embed, object, video {
 }
 
 a:link {
-  color: $fontNavColor;
   text-decoration: none;
   transition: $animation;
 }
 
 a:visited {
-  color: $fontNavColor;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: none;
-  color: $fontNavColorHover;
 }
+
 
 a:active {
   text-decoration: none;
@@ -146,6 +144,18 @@ a:active {
       }
     }
   }
+  .hamburger::after {
+    content: "← menu";
+    color: $fontNavColor;
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    font: {
+      family: $fontNav;
+      size: 2rem;
+      weight: 700;
+    }
+  }
   .hamburger::before {
     content: '';
     position: fixed;
@@ -178,13 +188,13 @@ a:active {
     color: $fontNavColorHover;
     letter-spacing: 1px;
   }
-  .page-link {
+  .page-link-gallery {
     font: {
       family: $fontNav;
       size: 1.6rem;
     }
     text-align: center;
-    color: $fontNavColor;
+    color: $fontLink;
     letter-spacing: 1px;
     &:hover {
       color: $fontNavBackgroundHover;
@@ -206,7 +216,8 @@ a:active {
       display: none;
     }
     & > #header-mobile {
-      margin-top: 45vh;
+      position: absolute;
+      bottom: 5%;
     }
     & > #header-mobile-about {
       margin-top: 1rem;
@@ -247,6 +258,18 @@ a:active {
         & > ol {
           & > li {
             list-style-type: none;
+          }
+        }
+        .page-link {
+          font: {
+            family: $fontNav;
+            size: 1.6rem;
+          }
+          text-align: center;
+          color: $fontLink;
+          letter-spacing: 1px;
+          &:hover {
+            color: $fontNavBackground;
           }
         }
       }
@@ -869,6 +892,7 @@ a:active {
     letter-spacing: 1px;
     color: $fontNavColor;
     user-select: none;
+    text-align: center;
     transition: $animation;
     line-height: 100%;
   }
@@ -916,11 +940,11 @@ a:active {
       align-content: center;
       align-items: center;
       position: absolute;
-      width: 20vw;
+      width: 35vw;
       margin-top: 5rem;
-      max-height: 100vh;
-      top: 50%;
-      left: 50%;
+      max-height: 98vh;
+      top: 45%;
+      left: 25%;
       transform: translate(-50%, -50%);
       background-color: $background-wrapper;
       border-radius: $radius;
@@ -932,7 +956,7 @@ a:active {
         text-align: left;
         padding: 0 2rem;
         margin: 1rem 0;
-        color: $fontNavColor;
+        color: $fontNavColorHover;
         overflow: hidden;
         text-overflow: ellipsis;
         & > p {
@@ -944,12 +968,27 @@ a:active {
               weight: 700;
             }
             color: $fontLink;
+            &:hover {
+              color: $fontNavBackground;
+            }
           }
         }
         & > ol {
           & > li {
             list-style-type: none;
           }
+        }
+      }
+      .page-link-more {
+        font: {
+          family: $fontNav;
+          size: 1.6rem;
+        }
+        text-align: center;
+        color: $fontLink;
+        letter-spacing: 1px;
+        &:hover {
+          color: $fontNavBackground;
         }
       }
     }
@@ -1502,6 +1541,7 @@ a:active {
       family: $fontNav;
       size: 1.6rem;
     }
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: $fontNavColor;
@@ -1583,6 +1623,9 @@ a:active {
               weight: 700;
             }
             color: $fontLink;
+            &:hover {
+              color: $fontNavBackground;
+            }
           }
         }
         & > ol {
@@ -1590,17 +1633,18 @@ a:active {
             list-style-type: none;
           }
         }
-        .page-link {
-          font: {
-            family: $fontNav;
-            size: 1.6rem;
-          }
-          text-align: center;
-          color: $fontNavColor;
-          letter-spacing: 1px;
-          &:hover {
-            color: $fontNavBackgroundHover;
-          }
+
+        }
+      .page-link-more {
+        font: {
+          family: $fontNav;
+          size: 1.6rem;
+        }
+        text-align: center;
+        color: $fontLink;
+        letter-spacing: 1px;
+        &:hover {
+          color: $fontNavBackground;
         }
       }
     }
